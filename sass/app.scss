@@ -106,7 +106,7 @@ body {
 
 				img {
 					width:$picWidth;
-					height:$picWidth;
+					height:$picWidth / 4 * 3;
 					border-radius:1px;
 					position:relative;
 					top:0;
@@ -117,10 +117,11 @@ body {
 						box-shadow:inset 0px 1px 0px rgba(255,255,255,.5);
 					    position: absolute; 
 					    width: $picWidth;
-					    height: $picWidth;
+					    height: $picWidth / 4 * 3;
 					    top: 0;
 					    left: 0;
 					    z-index:6;
+					    outline:none;
 					    @include transition(all .3s ease-in-out);
 					    &.reveal {
 							top:$dropHeight;
