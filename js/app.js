@@ -21,23 +21,23 @@ var drib = {
       $.ajax({
             url: url,
             dataType: 'jsonp',
-            timeout: 2000,
-            success: function(data) {  
+            timeout:   1000,
+            success: function(data) {
                console.log('did the thing');
-               cb(data); 
+               cb(data);
             },
             error: function(x, t, m) {
                if(t==="timeout") {
                    console.log('timeout error');
-                   popularShots.buildShots(data.shots);
+                   drib.getPopular();
                } else {
                    console.log('else timeout error');
-                   popularShots.buildShots(data.shots);
+                   drib.getPopular();
                }
             }
-         }
-    
-   }
+         });
+      }
+   }    
 
 var popularShots = {
    container:$('#picsList'),
