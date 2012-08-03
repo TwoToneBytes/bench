@@ -63,6 +63,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+/* =====================
+variables
+======================*/
 /*----------------------
 Partials
 ----------------------*/
@@ -6812,13 +6815,423 @@ Partials
   }
 }
 
-/* =====================
-variables
-======================*/
+/* line 1, ../sass/partials/_flipper.scss */
+.item .picture {
+  width: 280px;
+  height: 210px;
+  position: relative;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-backface-visibility: hidden;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+}
+
+/* Default image */
+/* line 14, ../sass/partials/_flipper.scss */
+.item .picture img {
+  border-radius: 3px;
+  position: relative;
+  z-index: 50;
+  width: 280px;
+}
+
+/* Shadow */
+/* line 22, ../sass/partials/_flipper.scss */
+.item .picture > b {
+  position: absolute;
+  top: 99%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 100%;
+  background: #000;
+  box-shadow: 0 0 20px 10px #000;
+  opacity: 0;
+  -webkit-transition: all 0.485s cubic-bezier(0.075, 0.45, 0.165, 1);
+  -moz-transition: all 0.485s cubic-bezier(0.075, 0.45, 0.165, 1);
+  -o-transition: all 0.485s cubic-bezier(0.075, 0.45, 0.165, 1);
+  -ms-transition: all 0.485s cubic-bezier(0.075, 0.45, 0.165, 1);
+}
+
+/* Slits wrap */
+/* line 37, ../sass/partials/_flipper.scss */
+.item .picture .slits {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+  -webkit-perspective: 700px;
+  -moz-perspective: 700px;
+  pointer-events: none;
+}
+
+/* Slit Style + Positioning */
+/* line 48, ../sass/partials/_flipper.scss */
+.item .picture .slits > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  overflow: hidden;
+  -webkit-transition: all 0.485s cubic-bezier(0.075, 0.45, 0.165, 1);
+  -moz-transition: all 0.485s cubic-bezier(0.075, 0.45, 0.165, 1);
+  -o-transition: all 0.485s cubic-bezier(0.075, 0.45, 0.165, 1);
+  -ms-transition: all 0.485s cubic-bezier(0.075, 0.45, 0.165, 1);
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: top;
+  -o-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+}
+
+/* Bottom slit positioning */
+/* line 64, ../sass/partials/_flipper.scss */
+.item .picture .slits > div + div {
+  top: 50%;
+  bottom: 0;
+}
+
+/* Bottom slit image position */
+/* line 69, ../sass/partials/_flipper.scss */
+.item .picture .slits > div + div img {
+  margin-top: -37%;
+}
+
+/* Top slit radius */
+/* line 77, ../sass/partials/_flipper.scss */
+.item .picture .slits > div img,
+.item .picture .slits > div b,
+.item .picture .slits > div em {
+  border-radius: 3px 3px 0 0;
+}
+
+/* Bottom slit radius */
+/* line 84, ../sass/partials/_flipper.scss */
+.item .picture .slits > div + div img,
+.item .picture .slits > div + div b,
+.item .picture .slits > div + div em {
+  border-radius: 0 0 3px 3px;
+}
+
+/* Slit gradient + inner shadow */
+/* line 90, ../sass/partials/_flipper.scss */
+.item .picture .slits > div b,
+.item .picture .slits > div em {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 70;
+  -webkit-transition: all 0.485s cubic-bezier(0.075, 0.45, 0.165, 1);
+}
+
+/* Slit gradient highlight */
+/* line 99, ../sass/partials/_flipper.scss */
+.item .picture .slits > div em {
+  opacity: 0;
+  background-color: #000000;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(white));
+  background-image: -webkit-linear-gradient(top, black, white);
+  background-image: -moz-linear-gradient(top, black, white);
+  background-image: -o-linear-gradient(top, black, white);
+  background-image: -ms-linear-gradient(top, black, white);
+  background-image: linear-gradient(top, #000000, #ffffff);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#ffffff');
+}
+
+/* Top slit inner shadow */
+/* line 112, ../sass/partials/_flipper.scss */
+.item .picture .slits > div b {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 0;
+}
+
+/* Bottom slit inner shadow */
+/* line 118, ../sass/partials/_flipper.scss */
+.item .picture .slits > div + div b {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 0;
+}
+
+/*  =====================================
+    Item hover
+/*  ===================================== */
+/* line 127, ../sass/partials/_flipper.scss */
+.item .picture:hover .slits > div + div {
+  -webkit-transform: rotateX(65deg);
+  -moz-transform: rotateX(65deg);
+  -o-transform: rotateX(65deg);
+  -ms-transform: rotateX(65deg);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* line 135, ../sass/partials/_flipper.scss */
+.item .picture:hover .slits > div + div b {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* line 139, ../sass/partials/_flipper.scss */
+.item .picture:hover .slits > div + div em {
+  opacity: 0.15;
+}
+
+/* Shadow */
+/* line 144, ../sass/partials/_flipper.scss */
+.item .picture:hover > b {
+  top: 70%;
+  left: 5%;
+  right: 5%;
+  bottom: 25%;
+  opacity: 0.65;
+}
+
+/*  =====================================
+    Item underlay
+/*  ===================================== */
+/* line 154, ../sass/partials/_flipper.scss */
+.item .picture .underlay {
+  height: 34px;
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Default button */
+/* line 169, ../sass/partials/_flipper.scss */
+.item .picture .underlay a {
+  width: 34px;
+  height: 34px;
+  display: inline-block;
+  margin: 0 8px;
+  border-radius: 100px;
+  position: relative;
+  float: left;
+  background-color: #1b1d1e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#35383b), to(#222426));
+  background-image: -webkit-linear-gradient(top, #35383b, #222426);
+  background-image: -moz-linear-gradient(top, #35383b, #222426);
+  background-image: -o-linear-gradient(top, #35383b, #222426);
+  background-image: -ms-linear-gradient(top, #35383b, #222426);
+  background-image: linear-gradient(top, #35383b, #222426);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#35383b', EndColorStr='#222426');
+  -webkit-transition: all 0.025s ease;
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.06), inset 0 1px 1px 0 rgba(255, 255, 255, 0.15), 0 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+/* line 190, ../sass/partials/_flipper.scss */
+.item .picture .underlay a img {
+  width: 34px;
+  height: 34px;
+  border-radius: 100px;
+}
+
+/* line 197, ../sass/partials/_flipper.scss */
+.item .picture .underlay a:hover {
+  background-color: #474a4e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#474a4e), to(#313336));
+  background-image: -webkit-linear-gradient(top, #474a4e, #313336);
+  background-image: -moz-linear-gradient(top, #474a4e, #313336);
+  background-image: -o-linear-gradient(top, #474a4e, #313336);
+  background-image: -ms-linear-gradient(top, #474a4e, #313336);
+  background-image: linear-gradient(top, #474a4e, #313336);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#474a4e', EndColorStr='#313336');
+}
+
+/* line 208, ../sass/partials/_flipper.scss */
+.item .picture .underlay a:active {
+  background: #1b1d1e;
+  box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 0 0 rgba(255, 255, 255, 0.07), 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+/* Rdio button */
+/* line 217, ../sass/partials/_flipper.scss */
+.item .picture .underlay a.r {
+  background-color: #09639e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#34abf8), to(#1273b1));
+  background-image: -webkit-linear-gradient(top, #34abf8, #1273b1);
+  background-image: -moz-linear-gradient(top, #34abf8, #1273b1);
+  background-image: -o-linear-gradient(top, #34abf8, #1273b1);
+  background-image: -ms-linear-gradient(top, #34abf8, #1273b1);
+  background-image: linear-gradient(top, #34abf8, #1273b1);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#34abf8', EndColorStr='#1273b1');
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* line 232, ../sass/partials/_flipper.scss */
+.item .picture .underlay a.r:hover {
+  background-color: #59beff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#59beff), to(#1982c6));
+  background-image: -webkit-linear-gradient(top, #59beff, #1982c6);
+  background-image: -moz-linear-gradient(top, #59beff, #1982c6);
+  background-image: -o-linear-gradient(top, #59beff, #1982c6);
+  background-image: -ms-linear-gradient(top, #59beff, #1982c6);
+  background-image: linear-gradient(top, #59beff, #1982c6);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#59beff', EndColorStr='#1982c6');
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* line 247, ../sass/partials/_flipper.scss */
+.item .picture .underlay a.r:active {
+  background: #09639e;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.95), inset 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 0 0 rgba(255, 255, 255, 0.07), 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+/* line 255, ../sass/partials/_flipper.scss */
+.item .picture .underlay span {
+  float: right;
+  color: #fff;
+  font-size: 90%;
+  line-height: 1.3em;
+  padding-right: 10px;
+}
+/* line 261, ../sass/partials/_flipper.scss */
+.item .picture .underlay span.name {
+  font-weight: bold;
+}
+/* line 264, ../sass/partials/_flipper.scss */
+.item .picture .underlay span.likes {
+  clear: right;
+}
+
+/*  =====================================
+    Item underlay buttons
+/*  ===================================== */
+/* Info */
+/* line 276, ../sass/partials/_flipper.scss */
+.item .picture .underlay a.i:after {
+  content: '';
+  display: block;
+  width: 9px;
+  height: 17px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -9px 0 0 -5px;
+  background: url(../img/sprite.png) no-repeat -1px 0;
+}
+
+/* line 287, ../sass/partials/_flipper.scss */
+.item .picture .underlay a.i:hover:after {
+  background-position: -1px -19px;
+}
+
+/* line 291, ../sass/partials/_flipper.scss */
+.item .picture .underlay a.i:active:after {
+  background-position: -1px -39px;
+}
+
+/* Rdio */
+/* line 296, ../sass/partials/_flipper.scss */
+.item .picture .underlay a.r:after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -9px 0 0 -10px;
+  background: url(../img/sprite.png) no-repeat 0px -61px;
+}
+
+/* line 307, ../sass/partials/_flipper.scss */
+.item .picture .underlay a.r:active:after {
+  background-position: 0px -82px;
+}
+
+/* Download */
+/* line 312, ../sass/partials/_flipper.scss */
+.item .picture .underlay a.d:after {
+  content: '';
+  display: block;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -10px;
+  background: url(../img/sprite.png) no-repeat 0px -104px;
+}
+
+/* line 323, ../sass/partials/_flipper.scss */
+.item .picture .underlay a.d:hover:after {
+  background-position: 0px -126px;
+}
+
+/* line 327, ../sass/partials/_flipper.scss */
+.item .picture .underlay a.d:active:after {
+  background-position: -1px -149px;
+}
+
+/*  =====================================
+    Item title + author
+/*  ===================================== */
+/* line 335, ../sass/partials/_flipper.scss */
+.item hgroup {
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Title */
+/* line 341, ../sass/partials/_flipper.scss */
+.item hgroup h1 {
+  padding: 5px 15px 2px;
+  font-size: 13px;
+  font-weight: 700;
+  background: #1d1e20;
+  color: #fff;
+  border-radius: 30px;
+  text-transform: uppercase;
+  margin: 15px 0 10px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
+  -ms-transition: all 0.15s linear;
+}
+
+/* line 358, ../sass/partials/_flipper.scss */
+.item hgroup h1:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Artist */
+/* line 364, ../sass/partials/_flipper.scss */
+.item hgroup h5 {
+  font-size: 11px;
+  font-weight: 500;
+  color: #91959c;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: inline-block;
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
+  -ms-transition: all 0.15s linear;
+}
+
+/* line 377, ../sass/partials/_flipper.scss */
+.item hgroup h5:hover {
+  color: #fff;
+}
+
 /* =====================
 app styles
 ======================*/
-/* line 24, ../sass/app.scss */
+/* line 25, ../sass/app.scss */
 body {
   background-color: #131214;
   font-family: 'Open Sans', sans-serif;
@@ -6828,19 +7241,19 @@ body {
   background-repeat: no-repeat, repeat;
 }
 
-/* line 33, ../sass/app.scss */
+/* line 34, ../sass/app.scss */
 .wrap {
-  width: 833.33333px;
+  width: 933.33333px;
   margin: auto;
 }
 
-/* line 38, ../sass/app.scss */
+/* line 39, ../sass/app.scss */
 .head {
-  padding: 41.66667px 0;
+  padding: 46.66667px 0;
   overflow: hidden;
-  margin-bottom: 20.83333px;
+  margin-bottom: 23.33333px;
 }
-/* line 42, ../sass/app.scss */
+/* line 43, ../sass/app.scss */
 .head .logo {
   background: url(img/logob.png) no-repeat;
   width: 100px;
@@ -6857,7 +7270,7 @@ body {
   -webkit-animation-fill-mode: both;
   background-size: 100%;
 }
-/* line 54, ../sass/app.scss */
+/* line 55, ../sass/app.scss */
 .head .loggedIn {
   float: right;
   width: 40%;
@@ -6869,7 +7282,7 @@ body {
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: both;
 }
-/* line 60, ../sass/app.scss */
+/* line 61, ../sass/app.scss */
 .head .loggedIn .avatar {
   height: 30px;
   border-radius: 3px;
@@ -6879,21 +7292,21 @@ body {
   box-shadow: inset 0 1px 0 white;
   margin-left: 5px;
 }
-/* line 67, ../sass/app.scss */
+/* line 68, ../sass/app.scss */
 .head .loggedIn .name {
   text-align: right;
   color: #fff;
   font-weight: 700;
   font-size: 80%;
 }
-/* line 73, ../sass/app.scss */
+/* line 74, ../sass/app.scss */
 .head .loggedIn .stats {
   text-align: right;
   color: #ccc;
   font-size: 70%;
 }
 
-/* line 82, ../sass/app.scss */
+/* line 83, ../sass/app.scss */
 .pics ul {
   -webkit-animation: fadeInUp 1s ease-in;
   -moz-animation: fadeInUp 1s ease-in;
@@ -6901,21 +7314,21 @@ body {
   -o-animation: fadeInUp 1s ease-in;
   animation: fadeInUp 1s ease-in;
 }
-/* line 84, ../sass/app.scss */
+/* line 85, ../sass/app.scss */
 .pics ul li {
   -webkit-transform: rotate3d(0, 0, 0, 0);
-  width: 250px;
-  height: 305.55556px;
+  width: 280px;
+  margin-bottom: 93.33333px;
   float: left;
-  padding-right: 41.66667px;
+  padding-right: 46.66667px;
   position: relative;
 }
-/* line 91, ../sass/app.scss */
+/* line 93, ../sass/app.scss */
 .pics ul li.animate {
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: both;
 }
-/* line 95, ../sass/app.scss */
+/* line 97, ../sass/app.scss */
 .pics ul li.fadeInUp {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
@@ -6923,7 +7336,7 @@ body {
   -o-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
-/* line 98, ../sass/app.scss */
+/* line 100, ../sass/app.scss */
 .pics ul li.bounceIn {
   -webkit-animation-name: bounceIn;
   -moz-animation-name: bounceIn;
@@ -6931,54 +7344,42 @@ body {
   -o-animation-name: bounceIn;
   animation-name: bounceIn;
 }
-/* line 101, ../sass/app.scss */
+/* line 103, ../sass/app.scss */
 .pics ul li:nth-child(3n+3) {
   padding-right: 0;
 }
-/* line 104, ../sass/app.scss */
-.pics ul li .highlight {
+/* line 106, ../sass/app.scss */
+.pics ul li .picture {
   position: relative;
+  /*img {
+  	width:$picWidth;
+  	height:$picWidth / 4 * 3;
+  	border-radius:1px;
+  	position:relative;
+  	top:0;
+  	left:0;
+  	z-index:5;
+  	@include transition(all .3s ease-in-out);
+  	+ a {
+  		box-shadow:inset 0px 1px 0px rgba(255,255,255,.5);
+  	    position: absolute; 
+  	    width: $picWidth;
+  	    height: $picWidth / 4 * 3;
+  	    top: 0;
+  	    left: 0;
+  	    z-index:6;
+  	    outline:none;
+  	    @include transition(all .3s ease-in-out);
+  	    &.reveal {
+  			top:$dropHeight;
+  		}	
+  	}
+  	&.reveal {
+  		top:$dropHeight;
+  	}
+  }*/
 }
-/* line 107, ../sass/app.scss */
-.pics ul li .highlight img {
-  width: 250px;
-  height: 187.5px;
-  border-radius: 1px;
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-/* line 116, ../sass/app.scss */
-.pics ul li .highlight img + a {
-  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5);
-  position: absolute;
-  width: 250px;
-  height: 187.5px;
-  top: 0;
-  left: 0;
-  z-index: 6;
-  outline: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-/* line 126, ../sass/app.scss */
-.pics ul li .highlight img + a.reveal {
-  top: 45px;
-}
-/* line 130, ../sass/app.scss */
-.pics ul li .highlight img.reveal {
-  top: 45px;
-}
-/* line 138, ../sass/app.scss */
+/* line 140, ../sass/app.scss */
 .pics .user {
   z-index: 1;
   position: absolute;
@@ -6986,9 +7387,9 @@ body {
   left: 0;
   height: 25px;
   padding: 10px 0;
-  width: 250px;
+  width: 280px;
 }
-/* line 146, ../sass/app.scss */
+/* line 148, ../sass/app.scss */
 .pics .user img {
   height: 25px;
   border-radius: 3px;
@@ -6997,7 +7398,7 @@ body {
   -moz-box-shadow: inset 0 1px 0 white;
   box-shadow: inset 0 1px 0 white;
 }
-/* line 152, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .pics .user span.name {
   color: #fff;
   font-weight: bold;
@@ -7005,7 +7406,7 @@ body {
   font-size: 80%;
   padding: 4px 0 0 5px;
 }
-/* line 160, ../sass/app.scss */
+/* line 162, ../sass/app.scss */
 .pics .user .like {
   width: 25px;
   height: 24px;
@@ -7014,11 +7415,11 @@ body {
   display: inline-block;
   cursor: pointer;
 }
-/* line 167, ../sass/app.scss */
+/* line 169, ../sass/app.scss */
 .pics .user .like:hover {
   background: url(img/heart.png) center bottom no-repeat;
 }
-/* line 171, ../sass/app.scss */
+/* line 173, ../sass/app.scss */
 .pics .user .heartAni {
   width: 25px;
   height: 24px;
@@ -7028,7 +7429,7 @@ body {
   position: absolute;
 }
 
-/* line 187, ../sass/app.scss */
+/* line 189, ../sass/app.scss */
 .footer {
   width: 100%;
   overflow: hidden;
@@ -7038,7 +7439,7 @@ body {
   -o-animation: fadeInUp 1.5s ease-in;
   animation: fadeInUp 1.5s ease-in;
 }
-/* line 191, ../sass/app.scss */
+/* line 193, ../sass/app.scss */
 .footer .more {
   border: 1px solid #1b191c;
   font-weight: 700;
@@ -7060,7 +7461,7 @@ body {
   margin-left: -30px;
   text-decoration: none;
 }
-/* line 210, ../sass/app.scss */
+/* line 212, ../sass/app.scss */
 .footer .more:hover {
   border-color: #999;
   background: -webkit-linear-gradient(top, white, #e0e0e0);
@@ -7069,7 +7470,7 @@ body {
   color: #46424a;
   text-shadow: 0 1px 1px white;
 }
-/* line 219, ../sass/app.scss */
+/* line 221, ../sass/app.scss */
 .footer .settings {
   text-indent: -9999px;
   background: url(img/settings.png) no-repeat;
@@ -7084,7 +7485,7 @@ body {
   -o-transition: all 0.25s 4ms both ease-in-out;
   transition: all 0.25s 4ms both ease-in-out;
 }
-/* line 228, ../sass/app.scss */
+/* line 230, ../sass/app.scss */
 .footer .settings:hover {
   opacity: .5;
 }
