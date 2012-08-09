@@ -7037,6 +7037,11 @@ Partials
 }
 
 /* line 197, ../sass/partials/_flipper.scss */
+.item .picture .underlay a.i {
+  float: right;
+}
+
+/* line 201, ../sass/partials/_flipper.scss */
 .item .picture .underlay a:hover {
   background-color: #474a4e;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#474a4e), to(#313336));
@@ -7048,190 +7053,40 @@ Partials
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#474a4e', EndColorStr='#313336');
 }
 
-/* line 208, ../sass/partials/_flipper.scss */
+/* line 212, ../sass/partials/_flipper.scss */
 .item .picture .underlay a:active {
   background: #1b1d1e;
   box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 0 0 rgba(255, 255, 255, 0.07), 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
-/* Rdio button */
-/* line 217, ../sass/partials/_flipper.scss */
-.item .picture .underlay a.r {
-  background-color: #09639e;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#34abf8), to(#1273b1));
-  background-image: -webkit-linear-gradient(top, #34abf8, #1273b1);
-  background-image: -moz-linear-gradient(top, #34abf8, #1273b1);
-  background-image: -o-linear-gradient(top, #34abf8, #1273b1);
-  background-image: -ms-linear-gradient(top, #34abf8, #1273b1);
-  background-image: linear-gradient(top, #34abf8, #1273b1);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#34abf8', EndColorStr='#1273b1');
-  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-/* line 232, ../sass/partials/_flipper.scss */
-.item .picture .underlay a.r:hover {
-  background-color: #59beff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#59beff), to(#1982c6));
-  background-image: -webkit-linear-gradient(top, #59beff, #1982c6);
-  background-image: -moz-linear-gradient(top, #59beff, #1982c6);
-  background-image: -o-linear-gradient(top, #59beff, #1982c6);
-  background-image: -ms-linear-gradient(top, #59beff, #1982c6);
-  background-image: linear-gradient(top, #59beff, #1982c6);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#59beff', EndColorStr='#1982c6');
-  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-/* line 247, ../sass/partials/_flipper.scss */
-.item .picture .underlay a.r:active {
-  background: #09639e;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.95), inset 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 0 0 rgba(255, 255, 255, 0.07), 0 0 0 1px rgba(255, 255, 255, 0.03);
-}
-
-/* line 255, ../sass/partials/_flipper.scss */
-.item .picture .underlay span {
+/* line 220, ../sass/partials/_flipper.scss */
+.shotStats {
   float: right;
-  color: #fff;
-  font-size: 90%;
-  line-height: 1.3em;
-  padding-right: 10px;
 }
-/* line 261, ../sass/partials/_flipper.scss */
-.item .picture .underlay span.name {
+/* line 222, ../sass/partials/_flipper.scss */
+.shotStats span.name {
+  color: #fff;
   font-weight: bold;
+  float: right;
+  font-size: 80%;
+  padding: 4px 0 0 5px;
+  width: 100%;
+  text-align: right;
 }
-/* line 264, ../sass/partials/_flipper.scss */
-.item .picture .underlay span.likes {
-  clear: right;
-}
-
-/*  =====================================
-    Item underlay buttons
-/*  ===================================== */
-/* Info */
-/* line 276, ../sass/partials/_flipper.scss */
-.item .picture .underlay a.i:after {
-  content: '';
-  display: block;
-  width: 9px;
-  height: 17px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -9px 0 0 -5px;
-  background: url(../img/sprite.png) no-repeat -1px 0;
-}
-
-/* line 287, ../sass/partials/_flipper.scss */
-.item .picture .underlay a.i:hover:after {
-  background-position: -1px -19px;
-}
-
-/* line 291, ../sass/partials/_flipper.scss */
-.item .picture .underlay a.i:active:after {
-  background-position: -1px -39px;
-}
-
-/* Rdio */
-/* line 296, ../sass/partials/_flipper.scss */
-.item .picture .underlay a.r:after {
-  content: '';
-  display: block;
-  width: 24px;
-  height: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -9px 0 0 -10px;
-  background: url(../img/sprite.png) no-repeat 0px -61px;
-}
-
-/* line 307, ../sass/partials/_flipper.scss */
-.item .picture .underlay a.r:active:after {
-  background-position: 0px -82px;
-}
-
-/* Download */
-/* line 312, ../sass/partials/_flipper.scss */
-.item .picture .underlay a.d:after {
-  content: '';
-  display: block;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -10px 0 0 -10px;
-  background: url(../img/sprite.png) no-repeat 0px -104px;
-}
-
-/* line 323, ../sass/partials/_flipper.scss */
-.item .picture .underlay a.d:hover:after {
-  background-position: 0px -126px;
-}
-
-/* line 327, ../sass/partials/_flipper.scss */
-.item .picture .underlay a.d:active:after {
-  background-position: -1px -149px;
-}
-
-/*  =====================================
-    Item title + author
-/*  ===================================== */
-/* line 335, ../sass/partials/_flipper.scss */
-.item hgroup {
-  text-align: center;
-  -webkit-backface-visibility: hidden;
-}
-
-/* Title */
-/* line 341, ../sass/partials/_flipper.scss */
-.item hgroup h1 {
-  padding: 5px 15px 2px;
-  font-size: 13px;
-  font-weight: 700;
-  background: #1d1e20;
+/* line 231, ../sass/partials/_flipper.scss */
+.shotStats span.likes {
   color: #fff;
-  border-radius: 30px;
-  text-transform: uppercase;
-  margin: 15px 0 10px;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-transition: all 0.15s linear;
-  -moz-transition: all 0.15s linear;
-  -o-transition: all 0.15s linear;
-  -ms-transition: all 0.15s linear;
-}
-
-/* line 358, ../sass/partials/_flipper.scss */
-.item hgroup h1:hover {
-  background: #fff;
-  color: #000;
-}
-
-/* Artist */
-/* line 364, ../sass/partials/_flipper.scss */
-.item hgroup h5 {
-  font-size: 11px;
-  font-weight: 500;
-  color: #91959c;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  display: inline-block;
-  -webkit-transition: all 0.15s linear;
-  -moz-transition: all 0.15s linear;
-  -o-transition: all 0.15s linear;
-  -ms-transition: all 0.15s linear;
-}
-
-/* line 377, ../sass/partials/_flipper.scss */
-.item hgroup h5:hover {
-  color: #fff;
+  float: right;
+  font-size: 70%;
+  padding: 4px 0 0 5px;
+  width: 100%;
+  text-align: right;
 }
 
 /* =====================
 app styles
 ======================*/
-/* line 25, ../sass/app.scss */
+/* line 26, ../sass/app.scss */
 body {
   background-color: #131214;
   font-family: 'Open Sans', sans-serif;
@@ -7241,19 +7096,25 @@ body {
   background-repeat: no-repeat, repeat;
 }
 
-/* line 34, ../sass/app.scss */
+/* line 36, ../sass/app.scss */
+a {
+  color: #68a4f5;
+  text-decoration: none;
+}
+
+/* line 41, ../sass/app.scss */
 .wrap {
   width: 933.33333px;
   margin: auto;
 }
 
-/* line 39, ../sass/app.scss */
+/* line 46, ../sass/app.scss */
 .head {
   padding: 46.66667px 0;
   overflow: hidden;
   margin-bottom: 23.33333px;
 }
-/* line 43, ../sass/app.scss */
+/* line 50, ../sass/app.scss */
 .head .logo {
   background: url(img/logob.png) no-repeat;
   width: 100px;
@@ -7270,7 +7131,7 @@ body {
   -webkit-animation-fill-mode: both;
   background-size: 100%;
 }
-/* line 55, ../sass/app.scss */
+/* line 62, ../sass/app.scss */
 .head .loggedIn {
   float: right;
   width: 40%;
@@ -7282,7 +7143,7 @@ body {
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: both;
 }
-/* line 61, ../sass/app.scss */
+/* line 68, ../sass/app.scss */
 .head .loggedIn .avatar {
   height: 30px;
   border-radius: 3px;
@@ -7292,21 +7153,21 @@ body {
   box-shadow: inset 0 1px 0 white;
   margin-left: 5px;
 }
-/* line 68, ../sass/app.scss */
+/* line 75, ../sass/app.scss */
 .head .loggedIn .name {
   text-align: right;
   color: #fff;
   font-weight: 700;
   font-size: 80%;
 }
-/* line 74, ../sass/app.scss */
+/* line 81, ../sass/app.scss */
 .head .loggedIn .stats {
   text-align: right;
   color: #ccc;
   font-size: 70%;
 }
 
-/* line 83, ../sass/app.scss */
+/* line 90, ../sass/app.scss */
 .pics ul {
   -webkit-animation: fadeInUp 1s ease-in;
   -moz-animation: fadeInUp 1s ease-in;
@@ -7314,21 +7175,21 @@ body {
   -o-animation: fadeInUp 1s ease-in;
   animation: fadeInUp 1s ease-in;
 }
-/* line 85, ../sass/app.scss */
+/* line 92, ../sass/app.scss */
 .pics ul li {
   -webkit-transform: rotate3d(0, 0, 0, 0);
   width: 280px;
-  margin-bottom: 93.33333px;
+  margin-bottom: 46.66667px;
   float: left;
   padding-right: 46.66667px;
   position: relative;
 }
-/* line 93, ../sass/app.scss */
+/* line 100, ../sass/app.scss */
 .pics ul li.animate {
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: both;
 }
-/* line 97, ../sass/app.scss */
+/* line 104, ../sass/app.scss */
 .pics ul li.fadeInUp {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
@@ -7336,7 +7197,7 @@ body {
   -o-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
-/* line 100, ../sass/app.scss */
+/* line 107, ../sass/app.scss */
 .pics ul li.bounceIn {
   -webkit-animation-name: bounceIn;
   -moz-animation-name: bounceIn;
@@ -7344,92 +7205,16 @@ body {
   -o-animation-name: bounceIn;
   animation-name: bounceIn;
 }
-/* line 103, ../sass/app.scss */
+/* line 110, ../sass/app.scss */
 .pics ul li:nth-child(3n+3) {
   padding-right: 0;
 }
-/* line 106, ../sass/app.scss */
+/* line 113, ../sass/app.scss */
 .pics ul li .picture {
   position: relative;
-  /*img {
-  	width:$picWidth;
-  	height:$picWidth / 4 * 3;
-  	border-radius:1px;
-  	position:relative;
-  	top:0;
-  	left:0;
-  	z-index:5;
-  	@include transition(all .3s ease-in-out);
-  	+ a {
-  		box-shadow:inset 0px 1px 0px rgba(255,255,255,.5);
-  	    position: absolute; 
-  	    width: $picWidth;
-  	    height: $picWidth / 4 * 3;
-  	    top: 0;
-  	    left: 0;
-  	    z-index:6;
-  	    outline:none;
-  	    @include transition(all .3s ease-in-out);
-  	    &.reveal {
-  			top:$dropHeight;
-  		}	
-  	}
-  	&.reveal {
-  		top:$dropHeight;
-  	}
-  }*/
-}
-/* line 140, ../sass/app.scss */
-.pics .user {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  padding: 10px 0;
-  width: 280px;
-}
-/* line 148, ../sass/app.scss */
-.pics .user img {
-  height: 25px;
-  border-radius: 3px;
-  float: left;
-  -webkit-box-shadow: inset 0 1px 0 white;
-  -moz-box-shadow: inset 0 1px 0 white;
-  box-shadow: inset 0 1px 0 white;
-}
-/* line 154, ../sass/app.scss */
-.pics .user span.name {
-  color: #fff;
-  font-weight: bold;
-  float: left;
-  font-size: 80%;
-  padding: 4px 0 0 5px;
-}
-/* line 162, ../sass/app.scss */
-.pics .user .like {
-  width: 25px;
-  height: 24px;
-  background: url(img/heart.png) center top no-repeat;
-  float: right;
-  display: inline-block;
-  cursor: pointer;
-}
-/* line 169, ../sass/app.scss */
-.pics .user .like:hover {
-  background: url(img/heart.png) center bottom no-repeat;
-}
-/* line 173, ../sass/app.scss */
-.pics .user .heartAni {
-  width: 25px;
-  height: 24px;
-  background-image: url(img/heartLrg.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  position: absolute;
 }
 
-/* line 189, ../sass/app.scss */
+/* line 121, ../sass/app.scss */
 .footer {
   width: 100%;
   overflow: hidden;
@@ -7439,7 +7224,7 @@ body {
   -o-animation: fadeInUp 1.5s ease-in;
   animation: fadeInUp 1.5s ease-in;
 }
-/* line 193, ../sass/app.scss */
+/* line 125, ../sass/app.scss */
 .footer .more {
   border: 1px solid #1b191c;
   font-weight: 700;
@@ -7461,7 +7246,7 @@ body {
   margin-left: -30px;
   text-decoration: none;
 }
-/* line 212, ../sass/app.scss */
+/* line 144, ../sass/app.scss */
 .footer .more:hover {
   border-color: #999;
   background: -webkit-linear-gradient(top, white, #e0e0e0);
@@ -7470,14 +7255,15 @@ body {
   color: #46424a;
   text-shadow: 0 1px 1px white;
 }
-/* line 221, ../sass/app.scss */
+/* line 153, ../sass/app.scss */
 .footer .settings {
   text-indent: -9999px;
   background: url(img/settings.png) no-repeat;
   width: 28px;
   height: 28px;
-  float: right;
-  opacity: .2;
+  display: block;
+  margin: auto;
+  opacity: .4;
   background-size: 100%;
   -webkit-transition: all 0.25s 4ms both ease-in-out;
   -moz-transition: all 0.25s 4ms both ease-in-out;
@@ -7485,7 +7271,115 @@ body {
   -o-transition: all 0.25s 4ms both ease-in-out;
   transition: all 0.25s 4ms both ease-in-out;
 }
-/* line 230, ../sass/app.scss */
+/* line 163, ../sass/app.scss */
 .footer .settings:hover {
-  opacity: .5;
+  opacity: .8;
+}
+
+/* =====================
+Settings Styles
+======================*/
+/* line 173, ../sass/app.scss */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+/* line 182, ../sass/app.scss */
+.content {
+  position: relative;
+  width: 933.33333px;
+  margin: auto;
+  margin-top: 5%;
+  z-index: 100;
+}
+/* line 188, ../sass/app.scss */
+.content.in {
+  -webkit-animation: fadeInDown 1s 500ms both cubic-bezier(0, 0, 0.45, 1);
+  -moz-animation: fadeInDown 1s 500ms both cubic-bezier(0, 0, 0.45, 1);
+  -ms-animation: fadeInDown 1s 500ms both cubic-bezier(0, 0, 0.45, 1);
+  -o-animation: fadeInDown 1s 500ms both cubic-bezier(0, 0, 0.45, 1);
+  animation: fadeInDown 1s 500ms both cubic-bezier(0, 0, 0.45, 1);
+}
+/* line 191, ../sass/app.scss */
+.content.out {
+  -webkit-animation: fadeOutUp 0.5s 0ms both cubic-bezier(0, 0, 0.45, 1);
+  -moz-animation: fadeOutUp 0.5s 0ms both cubic-bezier(0, 0, 0.45, 1);
+  -ms-animation: fadeOutUp 0.5s 0ms both cubic-bezier(0, 0, 0.45, 1);
+  -o-animation: fadeOutUp 0.5s 0ms both cubic-bezier(0, 0, 0.45, 1);
+  animation: fadeOutUp 0.5s 0ms both cubic-bezier(0, 0, 0.45, 1);
+}
+/* line 194, ../sass/app.scss */
+.content input {
+  border: 0;
+  background: transparent;
+  font-size: 2em;
+  font-weight: 200;
+  letter-spacing: -0.01em;
+  color: #68a4f5;
+  font-family: 'Open Sans', sans-serif;
+  padding-top: .5em;
+  border-bottom: 1px dashed #333;
+  width: 60%;
+}
+/* line 205, ../sass/app.scss */
+.content input:focus {
+  outline: none;
+}
+/* line 209, ../sass/app.scss */
+.content h2 {
+  font-weight: 200;
+  font-size: 3em;
+  padding-top: 1em;
+  color: #fff;
+}
+/* line 215, ../sass/app.scss */
+.content p {
+  color: #ccc;
+  padding-top: 1em;
+  width: 60%;
+  line-height: 1.4em;
+}
+/* line 220, ../sass/app.scss */
+.content p.subInfo {
+  font-size: .8em;
+  color: #999;
+}
+/* line 225, ../sass/app.scss */
+.content .close {
+  text-indent: -9999px;
+  background: url(img/close.png) no-repeat;
+  width: 28px;
+  height: 28px;
+  display: block;
+  margin: auto;
+  opacity: .4;
+  background-size: 100%;
+  margin-top: 70px;
+  cursor: pointer;
+  -webkit-transition: all 0.25s 4ms both ease-in-out;
+  -moz-transition: all 0.25s 4ms both ease-in-out;
+  -ms-transition: all 0.25s 4ms both ease-in-out;
+  -o-transition: all 0.25s 4ms both ease-in-out;
+  transition: all 0.25s 4ms both ease-in-out;
+}
+/* line 237, ../sass/app.scss */
+.content .close:hover {
+  opacity: .6;
+}
+
+/* line 242, ../sass/app.scss */
+.overlayBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: .95;
+  z-index: 50;
 }

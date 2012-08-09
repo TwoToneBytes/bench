@@ -18,7 +18,7 @@
 <body>
     <div class="wrap">
         <div class="head">
-            <input type="text" id="lookup-player" placeholder="player name" />
+            
         </div><!-- End .head -->   
         <div class="pics">
             <ul id="picsList">
@@ -27,11 +27,25 @@
 
         </div><!-- End .pics -->
         <div class="footer">
-            <a href="#" class="more">Load More</a>
             <a href="#" class="settings">Settings</a>
         </div> 
     </div><!-- End .wrap -->    
-    
+    <div class="overlay">
+        <div class="content">
+            <h2>Your Dribbble Username</h2>
+            <input type="text" id="lookup-player" placeholder="player name" />
+            <p class="subInfo">If you leave this blank Benchwarmer will show the latest popular shots</p>
+        
+            <h2>Feedback & Support</h2>
+            <p>We would love to hear your options, ideas requests as well as bugs that you may find.  Please tweet them to us at our handles below</p>
+
+
+            <h2>Who Built This?</h2>
+            <p>Benchwarmer was built by <a href="http://www.twitter.com/scottcorgan">@scottcorgan</a> & <a href="http://www.twitter.com/michaelsacca">@michaelsacca</a> of <a href="http://www.tinyfactory.co">Tiny Factory</a></p>
+            <a class="close">Close</a>
+        </div>    
+        <div class="overlayBg"></div>    
+    </div>
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>

@@ -194,6 +194,10 @@
         }
     }
     
+    .item .picture .underlay a.i {
+        float:right;
+    }
+
     .item .picture .underlay a:hover {
         background-color: #474a4e;
         background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(71, 74, 78)), to(rgb(49, 51, 54)));
@@ -212,168 +216,24 @@
                     0 1px 0 0 rgba(255,255,255,0.07),
                     0 0 0 1px rgba(255,255,255,0.03);
     }
-    
-    /* Rdio button */
-    .item .picture .underlay a.r {
-        background-color: #09639e;
-        background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(52, 171, 248)), to(rgb(18, 115, 177)));
-        background-image: -webkit-linear-gradient(top, rgb(52, 171, 248), rgb(18, 115, 177));
-        background-image: -moz-linear-gradient(top, rgb(52, 171, 248), rgb(18, 115, 177));
-        background-image: -o-linear-gradient(top, rgb(52, 171, 248), rgb(18, 115, 177));
-        background-image: -ms-linear-gradient(top, rgb(52, 171, 248), rgb(18, 115, 177));
-        background-image: linear-gradient(top, rgb(52, 171, 248), rgb(18, 115, 177));
-        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#34abf8', EndColorStr='#1273b1');
-        box-shadow: inset 0 0 1px 1px rgba(255,255,255,0.2),
-                    inset 0 1px 0 0 rgba(255,255,255,0.1),
-                    0 0 1px 1px rgba(0,0,0,0.4),
-                    0 1px 2px rgba(0,0,0,0.4);
-    }
-    
-    .item .picture .underlay a.r:hover {
-        background-color: #59beff;
-        background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(89, 190, 255)), to(rgb(25, 130, 198)));
-        background-image: -webkit-linear-gradient(top, rgb(89, 190, 255), rgb(25, 130, 198));
-        background-image: -moz-linear-gradient(top, rgb(89, 190, 255), rgb(25, 130, 198));
-        background-image: -o-linear-gradient(top, rgb(89, 190, 255), rgb(25, 130, 198));
-        background-image: -ms-linear-gradient(top, rgb(89, 190, 255), rgb(25, 130, 198));
-        background-image: linear-gradient(top, rgb(89, 190, 255), rgb(25, 130, 198));
-        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#59beff', EndColorStr='#1982c6');
-        box-shadow: inset 0 0 1px 1px rgba(255,255,255,0.2),
-                    inset 0 1px 0 0 rgba(255,255,255,0.25),
-                    0 0 1px 1px rgba(0,0,0,0.4),
-                    0 1px 2px rgba(0,0,0,0.4);
-    }
-    
-    .item .picture .underlay a.r:active {
-        background: #09639e;
-        box-shadow: inset 0 0 0 1px rgba(0,0,0,0.95),
-                    inset 0 1px 3px 0 rgba(0,0,0,0.4),
-                    0 1px 0 0 rgba(255,255,255,0.07),
-                    0 0 0 1px rgba(255,255,255,0.03);
-    }
 
-    .item .picture .underlay span {
+    .shotStats {
         float:right;
-        color:#fff;
-        font-size:90%;
-        line-height:1.3em;
-        padding-right:10px;
-        &.name {
+        span.name {
+            color:#fff;
             font-weight:bold;
+            float:right;
+            font-size:80%;
+            padding:4px 0 0 5px;
+            width:100%;
+            text-align:right;
         }
-        &.likes {
-            clear:right;
+        span.likes {
+            color:#fff;
+            float:right;
+            font-size:70%;
+            padding:4px 0 0 5px;
+            width:100%;
+            text-align:right;
         }
-    }
-    
-/*  =====================================
-    Item underlay buttons
-/*  ===================================== */
-    
-
-
-    /* Info */
-    .item .picture .underlay a.i:after {
-        content: '';
-        display: block;
-        width: 9px;
-        height: 17px;
-        position: absolute;
-        top: 50%; left: 50%;
-        margin: -9px 0 0 -5px;
-        background: url(../img/sprite.png) no-repeat -1px 0;
-    }
-    
-    .item .picture .underlay a.i:hover:after {
-        background-position: -1px -19px;
-    }
-    
-    .item .picture .underlay a.i:active:after {
-        background-position: -1px -39px;
-    }
-    
-    /* Rdio */
-    .item .picture .underlay a.r:after {
-        content: '';
-        display: block;
-        width: 24px;
-        height: 20px;
-        position: absolute;
-        top: 50%; left: 50%;
-        margin: -9px 0 0 -10px;
-        background: url(../img/sprite.png) no-repeat 0px -61px;
-    }
-    
-    .item .picture .underlay a.r:active:after {
-        background-position: 0px -82px;
-    }
-    
-    /* Download */
-    .item .picture .underlay a.d:after {
-        content: '';
-        display: block;
-        width: 21px;
-        height: 21px;
-        position: absolute;
-        top: 50%; left: 50%;
-        margin: -10px 0 0 -10px;
-        background: url(../img/sprite.png) no-repeat 0px -104px;
-    }
-    
-    .item .picture .underlay a.d:hover:after {
-        background-position: 0px -126px;
-    }
-    
-    .item .picture .underlay a.d:active:after {
-        background-position: -1px -149px;
-    }
-    
-/*  =====================================
-    Item title + author
-/*  ===================================== */
-    
-    .item hgroup {
-        text-align: center;
-        -webkit-backface-visibility: hidden;
-    }
-    
-    /* Title */
-    .item hgroup h1 {
-        padding: 5px 15px 2px;
-        font-size: 13px;
-        font-weight: 700;
-        background: #1d1e20;
-        color: #fff;
-        border-radius: 30px;
-        text-transform: uppercase;
-        margin: 15px 0 10px;
-        display: inline-block;
-        cursor: pointer;
-        -webkit-transition: all 0.15s linear;
-        -moz-transition: all 0.15s linear;
-        -o-transition: all 0.15s linear;
-        -ms-transition: all 0.15s linear;
-    }
-    
-    .item hgroup h1:hover {
-        background: #fff;
-        color: #000;
-    }
-    
-    /* Artist */
-    .item hgroup h5 {
-        font-size: 11px;
-        font-weight: 500;
-        color: #91959c;
-        text-shadow: 0 1px 0 rgba(0,0,0,0.3);
-        cursor: pointer;
-        display: inline-block;
-        -webkit-transition: all 0.15s linear;
-        -moz-transition: all 0.15s linear;
-        -o-transition: all 0.15s linear;
-        -ms-transition: all 0.15s linear;
-    }
-    
-    .item hgroup h5:hover {
-        color: #fff;
     }

@@ -49,9 +49,13 @@ var popularShots = {
             '    <div class="picture">'+
             '        <img class="shot" src="'+ shots[i].image_url +'" style="display:none;"/>'+
             '        <div class="underlay">'+
+            '            <a class="r" href="'+ shots[i].url +'"><img src="'+ shots[i].image_url +'" /></a>'+
             '            <a class="i" href="'+ shots[i].player.url +'"><img src="'+ shots[i].player.avatar_url +'" /></a>'+
-            '            <span class="name">'+ shots[i].player.name +'</span>'+
-            '            <span class="likes">'+ shots[i].likes_count +' Likes</span>'+
+
+            '           <div class="shotStats">'+
+            '              <span class="name">'+ shots[i].player.name +'</span>'+
+            '              <span class="likes">'+ shots[i].likes_count +' Likes</span>'+
+            '           </div>'+
             '        </div>'+
             '        <div class="slits">'+
             '           <div>'+
@@ -82,10 +86,14 @@ var getFollowingShots = {
             '    <div class="picture">'+
             '        <img class="shot" src="'+ shots[i].image_url +'" style="display:none;"/>'+
             '        <div class="underlay">'+
+            '            <a class="r" href="'+ shots[i].url +'"><img src="css/img/arrow.png" /></a>'+
             '            <a class="i" href="'+ shots[i].player.url +'"><img src="'+ shots[i].player.avatar_url +'" /></a>'+
-            '            <span class="name">'+ shots[i].player.name +'</span>'+
-            '            <span class="likes">'+ shots[i].likes_count +' Likes</span>'+
-            '        </div>'+
+            
+            '           <div class="shotStats">'+
+            '              <span class="name">'+ shots[i].player.name +'</span>'+
+            '              <span class="likes">'+ shots[i].likes_count +' Likes</span>'+
+            '           </div>'+
+           '        </div>'+
             '        <div class="slits">'+
             '           <div>'+
             '               <b></b>'+
@@ -136,7 +144,19 @@ $(function() {
    ui.init();
    
    /* GO */
-   Flipper.do('.picture');
+   //Flipper.do('.picture');
+
+   $("a.settings").click(function() {
+      $(".overlay").fadeIn(250);
+      $(".content").removeClass('out').addClass('in').show();
+   });
+
+   $(".close").click(function() {
+      $(".overlay").delay(250).fadeOut(250);
+      $(".content").removeClass('in').addClass('out').css({
+       // "display" : "none"
+      });
+   });
 
    /*$('ul#picsList').on("mouseenter", "li", function(){
             $(this).find('.highlight').children().addClass('reveal');
