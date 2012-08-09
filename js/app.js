@@ -49,7 +49,7 @@ var popularShots = {
             '    <div class="picture">'+
             '        <img class="shot" src="'+ shots[i].image_url +'" style="display:none;"/>'+
             '        <div class="underlay">'+
-            '            <a class="r" href="'+ shots[i].url +'"><img src="'+ shots[i].image_url +'" /></a>'+
+            '            <a class="r" href="'+ shots[i].url +'"><img src="css/img/arrow.png" /></a>'+
             '            <a class="i" href="'+ shots[i].player.url +'"><img src="'+ shots[i].player.avatar_url +'" /></a>'+
 
             '           <div class="shotStats">'+
