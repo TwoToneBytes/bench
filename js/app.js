@@ -1,12 +1,10 @@
- var showing = 0;
+var showing = 0;
 var drib = {
    host: 'http://api.dribbble.com',
    popular: '/shots/popular',
    everyone: '/shots/everyone',
    debuts: '/shots/debuts',
    player: '/players/',
-
-   
 
    getPopular: function(){
       var url = drib.host + drib.popular;
