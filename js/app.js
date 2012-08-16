@@ -72,7 +72,7 @@ var drib = {
                   $('#lookup-player').removeClass().addClass('everyone');
                } else if(showing == 2) {
                   console.log('hello debuts');
-                  $('.subInfo').html("<span style='color:#81ce4d'>We're showing Debuts!</span> You can also input your username, 'debuts' or 'popular'");
+                  $('.subInfo').html("<span style='color:#81ce4d'>We're showing Debuts!</span> You can also input your username, 'everyone' or 'popular'");
                   $('#lookup-player').removeClass().addClass('debuts');
                } else if(showing == 4) {
                   console.log('hello popular');
