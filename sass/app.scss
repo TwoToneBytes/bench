@@ -36,6 +36,10 @@ body {
 a {
 	color:$blue;
 	text-decoration:none;
+	outline:none;
+	&:hover {
+		color:#ce4d73;
+	}
 }
 
 .wrap {
@@ -77,6 +81,10 @@ a {
 			color:#fff;
 			font-weight:700;
 			font-size:80%;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			width: 120px;
 		}
 		.stats {
 			text-align:right;
@@ -87,6 +95,7 @@ a {
 }
 
 .pics {
+	//overflow:hidden;
 	ul {
 		@include animation(fadeInUp 1s ease-in);
 		li {
@@ -204,7 +213,13 @@ Settings Styles
 		width:60%;
 		&:focus {
 			outline:none;
-		}	
+		}
+		&.error {
+			color:#ce4d73;
+		}
+		//&.playerList {
+		//	color:#81ce4d;
+		//}	
 	}
 	h2 {
 		font-weight:200;
@@ -215,7 +230,7 @@ Settings Styles
 	p {
 		color:#ccc;
 		padding-top:1em;
-		width:60%;
+		width:65%;
 		line-height:1.4em;
 		&.subInfo {
 			font-size:.8em;
@@ -248,4 +263,8 @@ Settings Styles
 	background:#000;
 	opacity:.95;
 	z-index:50;
+}
+
+.clear {
+	clear:both;
 }

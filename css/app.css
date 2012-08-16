@@ -7072,8 +7072,12 @@ Partials
   padding: 4px 0 0 5px;
   width: 100%;
   text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 120px;
 }
-/* line 231, ../sass/partials/_flipper.scss */
+/* line 236, ../sass/partials/_flipper.scss */
 .shotStats span.likes {
   color: #fff;
   float: right;
@@ -7100,21 +7104,26 @@ body {
 a {
   color: #68a4f5;
   text-decoration: none;
+  outline: none;
+}
+/* line 40, ../sass/app.scss */
+a:hover {
+  color: #ce4d73;
 }
 
-/* line 41, ../sass/app.scss */
+/* line 45, ../sass/app.scss */
 .wrap {
   width: 933.33333px;
   margin: auto;
 }
 
-/* line 46, ../sass/app.scss */
+/* line 50, ../sass/app.scss */
 .head {
   padding: 46.66667px 0;
   overflow: hidden;
   margin-bottom: 23.33333px;
 }
-/* line 50, ../sass/app.scss */
+/* line 54, ../sass/app.scss */
 .head .logo {
   background: url(img/logob.png) no-repeat;
   width: 100px;
@@ -7131,7 +7140,7 @@ a {
   -webkit-animation-fill-mode: both;
   background-size: 100%;
 }
-/* line 62, ../sass/app.scss */
+/* line 66, ../sass/app.scss */
 .head .loggedIn {
   float: right;
   width: 40%;
@@ -7143,7 +7152,7 @@ a {
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: both;
 }
-/* line 68, ../sass/app.scss */
+/* line 72, ../sass/app.scss */
 .head .loggedIn .avatar {
   height: 30px;
   border-radius: 3px;
@@ -7153,21 +7162,25 @@ a {
   box-shadow: inset 0 1px 0 white;
   margin-left: 5px;
 }
-/* line 75, ../sass/app.scss */
+/* line 79, ../sass/app.scss */
 .head .loggedIn .name {
   text-align: right;
   color: #fff;
   font-weight: 700;
   font-size: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 120px;
 }
-/* line 81, ../sass/app.scss */
+/* line 89, ../sass/app.scss */
 .head .loggedIn .stats {
   text-align: right;
   color: #ccc;
   font-size: 70%;
 }
 
-/* line 90, ../sass/app.scss */
+/* line 99, ../sass/app.scss */
 .pics ul {
   -webkit-animation: fadeInUp 1s ease-in;
   -moz-animation: fadeInUp 1s ease-in;
@@ -7175,7 +7188,7 @@ a {
   -o-animation: fadeInUp 1s ease-in;
   animation: fadeInUp 1s ease-in;
 }
-/* line 92, ../sass/app.scss */
+/* line 101, ../sass/app.scss */
 .pics ul li {
   -webkit-transform: rotate3d(0, 0, 0, 0);
   width: 280px;
@@ -7184,12 +7197,12 @@ a {
   padding-right: 46.66667px;
   position: relative;
 }
-/* line 100, ../sass/app.scss */
+/* line 109, ../sass/app.scss */
 .pics ul li.animate {
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: both;
 }
-/* line 104, ../sass/app.scss */
+/* line 113, ../sass/app.scss */
 .pics ul li.fadeInUp {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
@@ -7197,7 +7210,7 @@ a {
   -o-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
-/* line 107, ../sass/app.scss */
+/* line 116, ../sass/app.scss */
 .pics ul li.bounceIn {
   -webkit-animation-name: bounceIn;
   -moz-animation-name: bounceIn;
@@ -7205,16 +7218,16 @@ a {
   -o-animation-name: bounceIn;
   animation-name: bounceIn;
 }
-/* line 110, ../sass/app.scss */
+/* line 119, ../sass/app.scss */
 .pics ul li:nth-child(3n+3) {
   padding-right: 0;
 }
-/* line 113, ../sass/app.scss */
+/* line 122, ../sass/app.scss */
 .pics ul li .picture {
   position: relative;
 }
 
-/* line 121, ../sass/app.scss */
+/* line 130, ../sass/app.scss */
 .footer {
   width: 100%;
   overflow: hidden;
@@ -7224,7 +7237,7 @@ a {
   -o-animation: fadeInUp 1.5s ease-in;
   animation: fadeInUp 1.5s ease-in;
 }
-/* line 125, ../sass/app.scss */
+/* line 134, ../sass/app.scss */
 .footer .more {
   border: 1px solid #1b191c;
   font-weight: 700;
@@ -7246,7 +7259,7 @@ a {
   margin-left: -30px;
   text-decoration: none;
 }
-/* line 144, ../sass/app.scss */
+/* line 153, ../sass/app.scss */
 .footer .more:hover {
   border-color: #999;
   background: -webkit-linear-gradient(top, white, #e0e0e0);
@@ -7255,7 +7268,7 @@ a {
   color: #46424a;
   text-shadow: 0 1px 1px white;
 }
-/* line 153, ../sass/app.scss */
+/* line 162, ../sass/app.scss */
 .footer .settings {
   text-indent: -9999px;
   background: url(img/settings.png) no-repeat;
@@ -7271,7 +7284,7 @@ a {
   -o-transition: all 0.25s 4ms both ease-in-out;
   transition: all 0.25s 4ms both ease-in-out;
 }
-/* line 163, ../sass/app.scss */
+/* line 172, ../sass/app.scss */
 .footer .settings:hover {
   opacity: .8;
 }
@@ -7279,7 +7292,7 @@ a {
 /* =====================
 Settings Styles
 ======================*/
-/* line 173, ../sass/app.scss */
+/* line 182, ../sass/app.scss */
 .overlay {
   position: absolute;
   top: 0;
@@ -7289,7 +7302,7 @@ Settings Styles
   display: none;
 }
 
-/* line 182, ../sass/app.scss */
+/* line 191, ../sass/app.scss */
 .content {
   position: relative;
   width: 933.33333px;
@@ -7297,7 +7310,7 @@ Settings Styles
   margin-top: 5%;
   z-index: 100;
 }
-/* line 188, ../sass/app.scss */
+/* line 197, ../sass/app.scss */
 .content.in {
   -webkit-animation: fadeInDown 1s 500ms both cubic-bezier(0, 0, 0.45, 1);
   -moz-animation: fadeInDown 1s 500ms both cubic-bezier(0, 0, 0.45, 1);
@@ -7305,7 +7318,7 @@ Settings Styles
   -o-animation: fadeInDown 1s 500ms both cubic-bezier(0, 0, 0.45, 1);
   animation: fadeInDown 1s 500ms both cubic-bezier(0, 0, 0.45, 1);
 }
-/* line 191, ../sass/app.scss */
+/* line 200, ../sass/app.scss */
 .content.out {
   -webkit-animation: fadeOutUp 0.5s 0ms both cubic-bezier(0, 0, 0.45, 1);
   -moz-animation: fadeOutUp 0.5s 0ms both cubic-bezier(0, 0, 0.45, 1);
@@ -7313,7 +7326,7 @@ Settings Styles
   -o-animation: fadeOutUp 0.5s 0ms both cubic-bezier(0, 0, 0.45, 1);
   animation: fadeOutUp 0.5s 0ms both cubic-bezier(0, 0, 0.45, 1);
 }
-/* line 194, ../sass/app.scss */
+/* line 203, ../sass/app.scss */
 .content input {
   border: 0;
   background: transparent;
@@ -7326,30 +7339,34 @@ Settings Styles
   border-bottom: 1px dashed #333;
   width: 60%;
 }
-/* line 205, ../sass/app.scss */
+/* line 214, ../sass/app.scss */
 .content input:focus {
   outline: none;
 }
-/* line 209, ../sass/app.scss */
+/* line 217, ../sass/app.scss */
+.content input.error {
+  color: #ce4d73;
+}
+/* line 224, ../sass/app.scss */
 .content h2 {
   font-weight: 200;
   font-size: 3em;
   padding-top: 1em;
   color: #fff;
 }
-/* line 215, ../sass/app.scss */
+/* line 230, ../sass/app.scss */
 .content p {
   color: #ccc;
   padding-top: 1em;
-  width: 60%;
+  width: 65%;
   line-height: 1.4em;
 }
-/* line 220, ../sass/app.scss */
+/* line 235, ../sass/app.scss */
 .content p.subInfo {
   font-size: .8em;
   color: #999;
 }
-/* line 225, ../sass/app.scss */
+/* line 240, ../sass/app.scss */
 .content .close {
   text-indent: -9999px;
   background: url(img/close.png) no-repeat;
@@ -7367,12 +7384,12 @@ Settings Styles
   -o-transition: all 0.25s 4ms both ease-in-out;
   transition: all 0.25s 4ms both ease-in-out;
 }
-/* line 237, ../sass/app.scss */
+/* line 252, ../sass/app.scss */
 .content .close:hover {
   opacity: .6;
 }
 
-/* line 242, ../sass/app.scss */
+/* line 257, ../sass/app.scss */
 .overlayBg {
   position: absolute;
   top: 0;
@@ -7382,4 +7399,9 @@ Settings Styles
   background: #000;
   opacity: .95;
   z-index: 50;
+}
+
+/* line 268, ../sass/app.scss */
+.clear {
+  clear: both;
 }
