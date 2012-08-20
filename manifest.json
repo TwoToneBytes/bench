@@ -1,22 +1,19 @@
 {
-  "name": "Benchwarmer - The Dribble Tab Extention",
-  "version": "0.1",
-  "manifest_version": 1,
-  "description": "Show the latest Dribble shots every time you open up a new tab",
+  "name": "Benchwarmer - The Dribbble Tab Extention",
+  "version": "0.4",
+  "manifest_version": 2,
+  "description": "Show the latest Dribbble shots everytime you open up a new tab",
+  "icons": { "16": "icon-16.png",
+             "48": "icon-48.png",
+            "128": "icon-128.png" },
   "chrome_url_overrides" : {
     "newtab": "index.html"
   },
-  "browser_action": {
-    "default_icon": "icon.png"
-  },
-  "permissions": [
-    "http://api.dribbble.com/",
-    "http://*/"
-  ],
   "content_scripts": [
     {
       "matches": ["http://api.dribbble.com/*"],
       "js": ["js/lib/jquery-1.8.0.js", "js/app.js"]
     }
-  ]
+  ],
+  "content_security_policy": "script-src 'self' https://query.yahooapis.com; object-src 'self'"
 }
