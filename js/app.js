@@ -1,4 +1,9 @@
+// Comment or uncomment this for production / dev
+//console.log = function(){};
+
 var showing = 0;
+var user = $('#lookup-player');
+var userName = window.localStorage.getItem('user');
 var drib = {
     host:'http://api.dribbble.com',
     popular:'/shots/popular',
@@ -14,7 +19,7 @@ var drib = {
         console.log(yql);
         this.req(yql, function (data) {
             console.log(data.results);
-            popularShots.buildShots(data.query.results.json.shots);
+            getShots.buildShots(data.query.results.json.shots);
 
         });
     },
@@ -24,7 +29,7 @@ var drib = {
         var yql = 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from json where url="' + url + '"') + '&format=json&callback=cbfunc';
         this.req(yql, function (data) {
             console.log(data);
-            popularShots.buildShots(data.query.results.json.shots);
+            getShots.buildShots(data.query.results.json.shots);
 
         });
     },
@@ -34,7 +39,7 @@ var drib = {
         var yql = 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from json where url="' + url + '"') + '&format=json&callback=cbfunc';
         this.req(yql, function (data) {
             console.log(data);
-            popularShots.buildShots(data.query.results.json.shots);
+            getShots.buildShots(data.query.results.json.shots);
 
         });
     },
@@ -44,7 +49,7 @@ var drib = {
         showing = 4;
         this.req(yql, function (data) {
             console.log(data);
-            popularShots.buildShots(data.query.results.json.shots);
+            getShots.buildShots(data.query.results.json.shots);
 
         });
     },
@@ -57,20 +62,22 @@ var drib = {
         this.req(yql, function (data) {
             console.log(data);
             $('#lookup-player').removeClass('error');
-            getFollowingShots.buildList(data.query.results.json.shots);
+            getShots.buildShots(data.query.results.json.shots);
 
         });
     },
     req:function (url, cbfunc) {
         var lastTimeChecked = window.localStorage.getItem("lastChecked") ? new Date(window.localStorage.getItem("lastChecked")) : null,
             cachedData = window.localStorage.getItem("cachedDribbbleData") ? JSON.parse(window.localStorage.getItem("cachedDribbbleData")) : null,
-            toCheckTime = new Date();
+            toCheckTime = new Date(),
+            userName = window.localStorage.getItem('user');
 
         // cache once every 30 minutes:
-        toCheckTime.setMinutes(toCheckTime.getMinutes() - 30);
+        toCheckTime.setMinutes(toCheckTime.getMinutes() - 10);
 
-        // Only call api if the data hasn't been cached:
-        if (!lastTimeChecked || (lastTimeChecked < toCheckTime && cachedData == null)) {
+        // Only call api if the data hasn't been cached or input has changed:
+        if (!lastTimeChecked || (lastTimeChecked < toCheckTime && cachedData == null) || userName !== user.val()) {
+            window.localStorage.setItem('user', user.val());
             $.ajax({
                 url:url,
                 dataType:'jsonp',
@@ -99,6 +106,7 @@ var drib = {
         }
         else {
             // call on succes with cached data:
+            console.log('cached data');
             OnSuccess(cachedData);
         }
 
@@ -133,7 +141,7 @@ var drib = {
 }
 
 
-var popularShots = {
+var getShots = {
     container:$('#picsList'),
     buildShots:function (shots) {
         var imgs = '';
@@ -170,99 +178,32 @@ var popularShots = {
     }
 }
 
-var getFollowingShots = {
-    buildList:function (shots) {
-        this.container = $('#picsList');
-        var imgs = '';
-        for (var i = 0; i < 6; i++) {
-            console.log(shots[i]);
-            imgs += '<li class="animate fadeInUp item" style="-webkit-animation-delay: ' + i * 150 + 'ms;">' +
-                '    <div class="picture">' +
-                '        <img class="shot" src="' + shots[i].image_url + '" style="display:none;"/>' +
-                '        <div class="underlay">' +
-                '            <a class="r" href="' + shots[i].url + '"><img src="css/img/arrow.png" /></a>' +
-                '            <a class="i" href="' + shots[i].player.url + '"><img src="' + shots[i].player.avatar_url + '" /></a>' +
-
-                '           <div class="shotStats">' +
-                '              <span class="name">' + shots[i].player.name + '</span>' +
-                '              <span class="likes">' + shots[i].likes_count + ' Likes</span>' +
-                '           </div>' +
-                '        </div>' +
-                '        <div class="slits">' +
-                '           <div>' +
-                '               <b></b>' +
-                '               <em></em>' +
-                '               <img src="' + shots[i].image_url + '">' +
-                '           </div>' +
-                '           <div>' +
-                '               <b></b>' +
-                '               <em></em>' +
-                '               <img src="' + shots[i].image_url + '">' +
-                '           </div>' +
-                '        </div>' +
-                '    </div>' +
-                '</li>';
-        }
-        this.container.html(imgs);
-    }
-}
-
-var user = $('#lookup-player');
 var ui = {
     init:function () {
-        var userName = window.localStorage.getItem('user');
-
-        user.blur(function () {
+        user.bind('blur keyup', function() {
+            if (event.type === 'keyup' && event.keyCode !== 13 && event.keyCode !== 10) return; 
             var val = $(this).val();
             if (val == 'debuts') {
-                window.localStorage.setItem('user', $(this).val());
+            //    window.localStorage.setItem('user', $(this).val());
                 drib.getDebuts();
                 return;
             } else if (val == 'everyone') {
-                window.localStorage.setItem('user', $(this).val());
+            //    window.localStorage.setItem('user', $(this).val());
                 drib.getEveryone();
                 return;
             } else if (val == 'popular') {
-                window.localStorage.setItem('user', $(this).val());
+            //    window.localStorage.setItem('user', $(this).val());
                 drib.getPopularNoError();
                 return;
             } else if (val == '') {
                 console.log('setting user to blank');
-                window.localStorage.setItem('user', '');
+            //    window.localStorage.setItem('user', '');
                 drib.getPopular();
                 return;
             }
 
-            window.localStorage.setItem('user', $(this).val());
+        //    window.localStorage.setItem('user', $(this).val());
             drib.getFollowing($(this).val());
-        });
-
-        user.keyup(function (event) {
-            if (event.keyCode == 13) {
-                var val = $(this).val();
-                if (val == 'debuts') {
-                    window.localStorage.setItem('user', $(this).val());
-                    drib.getDebuts();
-                    return;
-                } else if (val == 'everyone') {
-                    window.localStorage.setItem('user', $(this).val());
-                    drib.getEveryone();
-                    return;
-                } else if (val == 'popular') {
-                    window.localStorage.setItem('user', $(this).val());
-                    drib.getPopularNoError();
-                    return;
-                } else if (val == '') {
-                    console.log('setting user to blank');
-                    window.localStorage.setItem('user', '');
-                    drib.getPopular();
-                    return;
-                }
-
-
-                window.localStorage.setItem('user', $(this).val());
-                drib.getFollowing($(this).val());
-            }
         });
 
         if (userName !== null && userName !== '') {
