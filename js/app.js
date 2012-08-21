@@ -180,29 +180,29 @@ var getShots = {
 
 var ui = {
     init:function () {
-        user.bind('blur keyup', function() {
-            if (event.type === 'keyup' && event.keyCode !== 13 && event.keyCode !== 10) return; 
+        user.bind('blur keyup', function () {
+            if (event.type === 'keyup' && event.keyCode !== 13 && event.keyCode !== 10) return;
             var val = $(this).val();
             if (val == 'debuts') {
-            //    window.localStorage.setItem('user', $(this).val());
+                //    window.localStorage.setItem('user', $(this).val());
                 drib.getDebuts();
                 return;
             } else if (val == 'everyone') {
-            //    window.localStorage.setItem('user', $(this).val());
+                //    window.localStorage.setItem('user', $(this).val());
                 drib.getEveryone();
                 return;
             } else if (val == 'popular') {
-            //    window.localStorage.setItem('user', $(this).val());
+                //    window.localStorage.setItem('user', $(this).val());
                 drib.getPopularNoError();
                 return;
             } else if (val == '') {
                 console.log('setting user to blank');
-            //    window.localStorage.setItem('user', '');
+                //    window.localStorage.setItem('user', '');
                 drib.getPopular();
                 return;
             }
 
-        //    window.localStorage.setItem('user', $(this).val());
+            //    window.localStorage.setItem('user', $(this).val());
             drib.getFollowing($(this).val());
         });
 
