@@ -1,9 +1,52 @@
 // Comment or uncomment this for production / dev
 //console.log = function(){};
+var cachingData = new function () {
+    // Constants:
+    var LAST_CHECKED = "lastChecked",
+        CACHED_DRIBBLE_DATA = "cachedDribbbleData",
+        USERNAME = "user";
 
-var showing = 0;
-var user = $('#lookup-player');
-var userName = window.localStorage.getItem('user');
+    var storageAPI = window.localStorage,
+        self = this;
+
+    self.getLastTimeChecked = function () {
+        return storageAPI.getItem(LAST_CHECKED) ? new Date(storageAPI.getItem(LAST_CHECKED)) : null;
+    };
+
+    self.getCachedShots = function () {
+        return storageAPI.getItem(CACHED_DRIBBLE_DATA) ? JSON.parse(storageAPI.getItem(CACHED_DRIBBLE_DATA)) : null;
+    };
+
+    self.getUsername = function () {
+        return storageAPI.getItem(USERNAME);
+    };
+
+    self.setLastChecked = function (date) {
+        console.log("Updating last checked", date);
+        storageAPI.setItem(LAST_CHECKED, date);
+    };
+
+    self.setCachedShots = function (jsonData) {
+        console.log("Updating cached shots", jsonData);
+        storageAPI.setItem(CACHED_DRIBBLE_DATA, jsonData);
+    };
+
+    self.setUsername = function (username) {
+        console.log("Updating username", username);
+        storageAPI.setItem(USERNAME, username);
+    };
+
+    // clears all the local storage items:
+    self.clearCache = function() {
+        console.log("clearing cache");
+        storageAPI.clear();
+    };
+};
+
+var showing = 0,
+    user = $('#lookup-player'),
+    userName = cachingData.getUsername();
+
 var drib = {
     host:'http://api.dribbble.com',
     popular:'/shots/popular',
@@ -67,17 +110,17 @@ var drib = {
         });
     },
     req:function (url, cbfunc) {
-        var lastTimeChecked = window.localStorage.getItem("lastChecked") ? new Date(window.localStorage.getItem("lastChecked")) : null,
-            cachedData = window.localStorage.getItem("cachedDribbbleData") ? JSON.parse(window.localStorage.getItem("cachedDribbbleData")) : null,
+        var lastTimeChecked = cachingData.getLastTimeChecked(),
+            cachedData = cachingData.getCachedShots(),
             toCheckTime = new Date(),
-            userName = window.localStorage.getItem('user');
+            userName = cachingData.getUsername();
 
-        // cache once every 30 minutes:
+        // cache once every 10 minutes:
         toCheckTime.setMinutes(toCheckTime.getMinutes() - 10);
 
         // Only call api if the data hasn't been cached or input has changed:
-        if (!lastTimeChecked || (lastTimeChecked < toCheckTime && cachedData == null) || userName !== user.val()) {
-            window.localStorage.setItem('user', user.val());
+        if (!lastTimeChecked || (lastTimeChecked < toCheckTime) || userName !== user.val()) {
+            cachingData.setUsername(user.val());
             $.ajax({
                 url:url,
                 dataType:'jsonp',
@@ -85,8 +128,8 @@ var drib = {
                 jsonpCallback:'cbfunc',
                 timeout:1000,
                 success:function (data) {
-                    window.localStorage.setItem("lastChecked", new Date());
-                    window.localStorage.setItem("cachedDribbbleData", JSON.stringify(data));
+                    cachingData.setLastChecked(new Date());
+                    cachingData.setCachedShots(JSON.stringify(data));
 
                     OnSuccess(data);
                 },
@@ -111,7 +154,7 @@ var drib = {
         }
 
         function OnSuccess(data) {
-            var userName = window.localStorage.getItem('user');
+            var userName = cachingData.getUsername();
             console.log('showing ' + showing);
             if (showing == 3) {
                 console.log('hello showing');
@@ -138,7 +181,7 @@ var drib = {
             cbfunc(data);
         }
     }
-}
+};
 
 
 var getShots = {
@@ -176,12 +219,16 @@ var getShots = {
         }
         this.container.html(imgs);
     }
-}
+};
 
 var ui = {
     init:function () {
-        user.bind('blur keyup', function () {
+        user.bind('blur keyup', function (event) {
             if (event.type === 'keyup' && event.keyCode !== 13 && event.keyCode !== 10) return;
+
+            // clear cache so that the data is refreshed:
+            cachingData.clearCache();
+
             var val = $(this).val();
             if (val == 'debuts') {
                 //    window.localStorage.setItem('user', $(this).val());
@@ -227,7 +274,7 @@ var ui = {
         }
 
     }
-}
+};
 
 $(function () {
     console.log('initialize');
