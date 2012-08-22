@@ -37,7 +37,7 @@ var cachingData = new function () {
     };
 
     // clears all the local storage items:
-    self.clearCache = function() {
+    self.clearCache = function () {
         console.log("clearing cache");
         storageAPI.clear();
     };
@@ -105,10 +105,18 @@ var drib = {
         this.req(yql, function (data) {
             console.log(data);
             $('#lookup-player').removeClass('error');
+            // check to see if the user was found: 
+            if (data.query.results.message && data.query.results.message == 'Not found') {
+                cachingData.clearCache();
+                drib.showError("We're sorry, we couldn't find that username.  We'll show you the popular shots in the meantime");
+                drib.getPopular();
+                return;
+            }
             getShots.buildShots(data.query.results.json.shots);
 
         });
     },
+
     req:function (url, cbfunc) {
         var lastTimeChecked = cachingData.getLastTimeChecked(),
             cachedData = cachingData.getCachedShots(),
@@ -134,9 +142,11 @@ var drib = {
                     OnSuccess(data);
                 },
                 error:function (x, t, m) {
+                    // automatically clear cache for any errors:
+                    cachingData.clearCache();
+
                     if (t === "timeout") {
-                        $('#lookup-player').removeClass('playerList').addClass('error');
-                        $('.subInfo').html("<span style='color:#ce4d73'>We're sorry, we couldn't find that username.  We'll show you the popular shots in the meantime<span>");
+                        drib.showError("We're sorry, we couldn't find that username.  We'll show you the popular shots in the meantime");
                         console.log('timeout error');
                         drib.getPopular();
                     } else {
@@ -180,6 +190,13 @@ var drib = {
             }
             cbfunc(data);
         }
+    },
+
+    showError:function (errorMessage) {
+        $('#lookup-player').removeClass('playerList').addClass('error');
+        $('.subInfo').html("<span style='color:#ce4d73'>" +
+            errorMessage +
+            "<span>");
     }
 };
 
