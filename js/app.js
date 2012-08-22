@@ -107,7 +107,6 @@ var drib = {
             $('#lookup-player').removeClass('error');
             // check to see if the user was found: 
             if (data.query.results.message && data.query.results.message == 'Not found') {
-                cachingData.clearCache();
                 drib.showError("We're sorry, we couldn't find that username.  We'll show you the popular shots in the meantime");
                 drib.getPopular();
                 return;
@@ -142,8 +141,6 @@ var drib = {
                     OnSuccess(data);
                 },
                 error:function (x, t, m) {
-                    // automatically clear cache for any errors:
-                    cachingData.clearCache();
 
                     if (t === "timeout") {
                         drib.showError("We're sorry, we couldn't find that username.  We'll show you the popular shots in the meantime");
@@ -193,6 +190,9 @@ var drib = {
     },
 
     showError:function (errorMessage) {
+		// data is tainted so clear cache:		                    
+		cachingData.clearCache();
+		
         $('#lookup-player').removeClass('playerList').addClass('error');
         $('.subInfo').html("<span style='color:#ce4d73'>" +
             errorMessage +
