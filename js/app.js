@@ -122,8 +122,8 @@ var drib = {
             toCheckTime = new Date(),
             userName = cachingData.getUsername();
 
-        // cache once every 10 minutes:
-        toCheckTime.setMinutes(toCheckTime.getMinutes() - 10);
+        // cache once every 5 minutes:
+        toCheckTime.setMinutes(toCheckTime.getMinutes() - 5);
 
         // Only call api if the data hasn't been cached or input has changed:
         if (!lastTimeChecked || (lastTimeChecked < toCheckTime) || userName !== user.val()) {
@@ -211,11 +211,11 @@ var getShots = {
                 '    <div class="picture">' +
                 '        <img class="shot" src="' + shots[i].image_url + '" style="display:none;"/>' +
                 '        <div class="underlay">' +
-                '            <a class="r" href="' + shots[i].url + '"><img src="css/img/arrow.png" /></a>' +
-                '            <a class="i" href="' + shots[i].player.url + '"><img src="' + shots[i].player.avatar_url + '" /></a>' +
+                '            <a class="r round" href="' + shots[i].url + '"><img src="css/img/arrow.png" /></a>' +
+                '            <a class="i round" href="' + shots[i].player.url + '"><img src="' + shots[i].player.avatar_url + '" /></a>' +
 
                 '           <div class="shotStats">' +
-                '              <span class="name">' + shots[i].player.name + '</span>' +
+                '              <span class="name"><a href="' + shots[i].player.url + '">' + shots[i].player.name + '</a></span>' +
                 '              <span class="likes">' + shots[i].likes_count + ' Likes</span>' +
                 '           </div>' +
                 '        </div>' +

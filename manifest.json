@@ -1,6 +1,6 @@
 {
   "name": "Benchwarmer - The Dribbble Tab Extention",
-  "version": "0.4",
+  "version": "0.5",
   "manifest_version": 2,
   "description": "Show the latest Dribbble shots everytime you open up a new tab",
   "icons": { "16": "icon-16.png",

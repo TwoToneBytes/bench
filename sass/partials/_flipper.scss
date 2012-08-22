@@ -166,7 +166,7 @@
     }
     
     /* Default button */
-    .item .picture .underlay a {
+    .item .picture .underlay a.round {
         width: 34px;
         height: 34px;
         display: inline-block;
@@ -232,6 +232,14 @@
             overflow: hidden;
             text-overflow: ellipsis;
             width: 120px;
+            a {
+                color:#fff;
+                &:hover {
+                    color:#68A4F5;
+                    background-color:transparent !important;
+                    background-image:none !important;
+                }
+            }
         }
         span.likes {
             color:#fff;

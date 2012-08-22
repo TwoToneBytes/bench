@@ -104,7 +104,7 @@ a {
 			//height:$picWidth + $picMargin + ($picMargin / 3);
 			margin-bottom:$picMargin;
 			float:left;
-			padding-right:$picMargin;
+			padding-right:$picMargin - 1;
 			position:relative;
 			&.animate {
 				-webkit-animation-duration:1s;

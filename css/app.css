@@ -7010,7 +7010,7 @@ Partials
 
 /* Default button */
 /* line 169, ../sass/partials/_flipper.scss */
-.item .picture .underlay a {
+.item .picture .underlay a.round {
   width: 34px;
   height: 34px;
   display: inline-block;
@@ -7030,7 +7030,7 @@ Partials
   box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.06), inset 0 1px 1px 0 rgba(255, 255, 255, 0.15), 0 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 /* line 190, ../sass/partials/_flipper.scss */
-.item .picture .underlay a img {
+.item .picture .underlay a.round img {
   width: 34px;
   height: 34px;
   border-radius: 100px;
@@ -7077,7 +7077,17 @@ Partials
   text-overflow: ellipsis;
   width: 120px;
 }
-/* line 236, ../sass/partials/_flipper.scss */
+/* line 235, ../sass/partials/_flipper.scss */
+.shotStats span.name a {
+  color: #fff;
+}
+/* line 237, ../sass/partials/_flipper.scss */
+.shotStats span.name a:hover {
+  color: #68A4F5;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+/* line 244, ../sass/partials/_flipper.scss */
 .shotStats span.likes {
   color: #fff;
   float: right;
@@ -7194,7 +7204,7 @@ a:hover {
   width: 280px;
   margin-bottom: 46.66667px;
   float: left;
-  padding-right: 46.66667px;
+  padding-right: 45.66667px;
   position: relative;
 }
 /* line 109, ../sass/app.scss */
