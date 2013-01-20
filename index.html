@@ -4,7 +4,6 @@
     <meta charset="utf-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="google" value="translate">
 
     <title>Benchwarmer</title>
     <meta name="description" content="Instagram Viewer">
@@ -19,33 +18,60 @@
 <body>
     <div class="wrap">
         <div class="head">
-
-        </div><!-- End .head -->
-        <div class="pics">
-            <ul id="picsList">
-
+            <div class="logo" style="-webkit-animation-delay: 400ms;">Benchwarmer</div>
+            <div class="user">
+            </div>
+            <ul class="nav">
+                <li id="popular" class="active">Popular</li>
+                <li id="everyone" >Everyone</li>
+                <li id="debuts" >Debuts</li>
+                <li id="self" class="signIn"> Sign In</li>
+                <li id="settings" class="settings"></li>
             </ul>
+        </div><!-- End .head -->   
+        
+        <!-- Settings -->
+        <div class="settingsPop">
+            <div class="content">
+                <h2 style=" padding-top: 0px;">Username</h2>
+                <input type="text" id="lookup-player" placeholder="player name" />
+                <p class="subInfo"></p>
+                <h2>Share This!</h2>
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=bit.ly/WUVKwo" target="_blank" style="margin-top: -2px;
+display: block; float: left; margin-right: 10px">
+                    <button class="button" style="padding: 4px;"><span class="text">Facebook</span></button>
+                </a>
+                
+                 <a href="https://twitter.com/share" class="twitter-share-button" data-url="bit.ly/WUVKwo" data-text="Check out Benchwarmer - The Dribbble new tab Chrome extension! bit.ly/WUVKwo" data-related="michaelsacca">Tweet</a>
+                
+                
+               
+                
+                <h2>Who Built This?</h2>
+
+                <p class="builtSub"><a href="http://www.dribbble.com/michaelsacca">Michael Sacca</a>, <a
+                        href="http://www.twitter.com/scottcorgan">Scott Corgan</a> and <a
+                        href="https://twitter.com/twotonebytes">Esteban Felix</a>. Benchwarmer is a <a href="http://www.tinyfactory.co">Tiny Factory</a> project</p>
+                
+                <a href="https://spb.io/cPIAGI7Nm7" class="donate" target="_blank">Donate</a>                              
+                <!--<a class="close">Close</a>-->
+            </div>
+            <!--<div class="overlayBg"></div>-->
+        </div>
+        <!-- End Settings -->
+        
+        <div class="pics">
+            <div id="picsList">
+                
+            </div>    
             <div class="clear"></div> <!-- :/ -->
         </div><!-- End .pics -->
         <div class="footer">
-            <a href="#" class="settings">Settings</a>
-        </div>
-    </div><!-- End .wrap -->
+        </div> 
+    </div><!-- End .wrap -->    
     <div class="overlay">
-        <div class="content">
-            <h2>Your Dribbble Username</h2>
-            <input type="text" id="lookup-player" placeholder="player name" />
-            <p class="subInfo">If you leave this blank Benchwarmer will show the latest popular shots</p>
-
-            <h2>Feedback & Support</h2>
-            <p>We would love to hear your options, ideas & requests as well as bugs that you may find.  Please tweet them to <a href="http://www.twitter.com/michaelsacca">@michaelsacca</a> or email <a href="mailto:hello@tinyfactory.co">hello@tinyfactory.co</a></p>
-
-
-            <h2>Who Built This?</h2>
-            <p>Benchwarmer was built by & <a href="http://www.twitter.com/michaelsacca">@michaelsacca</a> of <a href="http://www.tinyfactory.co">Tiny Factory</a> with <a href="http://www.twitter.com/scottcorgan">@scottcorgan</a>, <a href="https://twitter.com/areus">@areus</a>, <a href="https://twitter.com/twotonebytes">@twotonebytes</a> and <a href="https://twitter.com/AlexRolek">@alexrolek</a>.  Much thanks to <a href="https://twitter.com/daryl">@daryl</a> for the flipper plugin</p>
-            <a class="close">Close</a>
-        </div>
-        <div class="overlayBg"></div>
+           
     </div>
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -54,6 +80,7 @@
     <!-- scripts concatenated and minified via build script -->
     <script src="js/lib/jquery-1.8.0.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/lib/twit.js"></script>
     <!-- end scripts -->
 </body>
 </html>

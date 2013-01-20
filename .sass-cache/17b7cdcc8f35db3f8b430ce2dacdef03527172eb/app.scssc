@@ -1,535 +1,0 @@
-3.2.0.alpha.103 (Bleeding Edge)
-974617a11b6b9c6856824b977a35244660592048
-o:Sass::Tree::RootNode
-:@has_childrenT:@template"s1@import "compass/css3";
-@import "compass/reset";
-
-/*----------------------
-Partials
-----------------------*/
-@import "partials/animation";
-@import "partials/animation/animate";
-
-
-/* =====================
-variables
-======================*/
-$bg:			#131214;
-$dropHeight: 	45px;
-$logo:          'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMkAAAAmCAYAAABu1L9SAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxOTY4QUM1RUQxMTIxMUUxOUUwM0U1NUEyMDQ5QzQzNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxOTY4QUM1RkQxMTIxMUUxOUUwM0U1NUEyMDQ5QzQzNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjE5NjhBQzVDRDExMjExRTE5RTAzRTU1QTIwNDlDNDM2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjE5NjhBQzVERDExMjExRTE5RTAzRTU1QTIwNDlDNDM2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+GCfpTgAAE7hJREFUeNrsXHtw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';
-$picWidth:      250px;
-$picMargin:     $picWidth / 6;
-$wrapWidth:     ($picWidth * 3) + ($picMargin * 2);
-
-/* =====================
-app styles
-======================*/
-body {
-	background-color:$bg;
-	font-family: 'Open Sans', sans-serif;
-	letter-spacing:-.01em;
-	background-image:url(img/bg.png), url(img/bgPat.png);
-	//background:url(img/bgPat.png);
-	background-position:center -10px, 0 0;
-	background-repeat:no-repeat, repeat;
-}
-.wrap {
-	width:$wrapWidth;
-	margin:auto;
-}
-
-.head {
-	padding:$picMargin 0;
-	overflow:hidden;
-	margin-bottom:$picMargin / 2;
-	.logo {
-		background:url(img/logob.png) no-repeat;
-		width:100px;
-		height:30px;
-		margin:auto;
-		text-indent:-9999px;
-		float:left;
-		@include animation(fadeInDown);
-		-webkit-animation-duration:1s;
-		-webkit-animation-fill-mode:both;
-		background-size:100%;
-	}
-	.loggedIn {
-		float:right;
-		width:40%;
-		@include animation(fadeInRight);
-		-webkit-animation-duration:1s;
-		-webkit-animation-fill-mode:both;
-		.avatar {
-			height:30px;
-			border-radius:3px;
-			float:right;
-			@include box-shadow(inset 0 1px 0 #fff);
-			margin-left:5px;
-		}
-		.name {
-			text-align:right;
-			color:#fff;
-			font-weight:700;
-			font-size:80%;
-		}
-		.stats {
-			text-align:right;
-			color:#ccc;
-			font-size:70%;
-		}
-	}
-}
-
-.pics {
-	ul {
-		@include animation(fadeInUp 1s ease-in);
-		li {
-			-webkit-transform: rotate3d(0,0,0,0);
-			width:$picWidth;
-			height:$picWidth + $picMargin + ($picMargin / 3);
-			float:left;
-			padding-right:$picMargin;
-			position:relative;
-			&.animate {
-				-webkit-animation-duration:1s;
-				-webkit-animation-fill-mode:both;
-			}
-			&.fadeInUp{   
-				@include animation-name(fadeInUp)
-			}
-			&.bounceIn {
-				@include animation-name(bounceIn);
-			}
-			&:nth-child(3n+3) {
-				padding-right:0;
-			}
-			.highlight {
-				position:relative;
-
-				img {
-					width:$picWidth;
-					height:$picWidth;
-					border-radius:1px;
-					position:relative;
-					top:0;
-					left:0;
-					z-index:5;
-					@include transition(all .3s ease-in-out);
-					+ a {
-						box-shadow:inset 0px 1px 0px rgba(255,255,255,.5);
-					    position: absolute; 
-					    width: $picWidth;
-					    height: $picWidth;
-					    top: 0;
-					    left: 0;
-					    z-index:6;
-					    @include transition(all .3s ease-in-out);
-					    &.reveal {
-							top:$dropHeight;
-						}	
-					}
-					&.reveal {
-						top:$dropHeight;
-					}
-				}
-			}
-			
-		}
-	}
-	.user {
-		z-index:1;
-		position:absolute;
-		top:0;
-		left:0;
-		height:$dropHeight - 20px;
-		padding:10px 0;
-		width: $picWidth;
-		img {
-			height:25px;
-			border-radius:3px;
-			float:left;
-			@include box-shadow(inset 0 1px 0 #fff);
-		}
-		span.name {
-			color:#fff;
-			font-weight:bold;
-			float:left;
-			font-size:80%;
-			padding:4px 0 0 5px;
-
-		}
-		.like {
-			width:25px;
-			height:24px;
-			background:url(img/heart.png) center top no-repeat;
-			float:right;
-			display:inline-block;
-			cursor:pointer;
-			&:hover {
-				background:url(img/heart.png) center bottom no-repeat;
-			}	
-		}
-		.heartAni {
-			width:25px;
-			height:24px;
-			background-image:url(img/heartLrg.png);
-			background-repeat:no-repeat;
-			background-size:100%;
-			position:absolute;
-			// for when Chrome supports animates on after classes 
-			//
-			//@include animation(fadeOut);
-			//-webkit-animation-duration:2s;
-			//-webkit-animation-fill-mode:both;
-		}
-	}
-}
-
-.footer {
-	width:100%;
-	overflow:hidden;
-	@include animation(fadeInUp 1.5s ease-in);
-	.more {
-		border: 1px solid lighten($bg, 3%);
-		font-weight:700;
-		font-size: 12px;
-		padding: 7px 10px;
-		white-space: nowrap;
-		vertical-align: middle;
-		color: lighten($bg, 10%);
-		background: transparent;
-		cursor: pointer;
-		border-radius:3px;
-		border: 1px solid lighten($bg, 5%);
-		@include box-shadow(0 1px 0 lighten($bg, 10%));
-		//@include transition(all .15s ease-in-out);
-		display: block;
-		position:absolute;
-		left:50%;
-		margin-left:-30px;
-		text-decoration:none;
-		&:hover {
-			border-color: #999;
-			background: -webkit-linear-gradient(top, white, #E0E0E0);
-			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5), inset 0 0 3px white;
-			text-decoration: none;
-			color: lighten($bg, 20%);
-			text-shadow:0 1px 1px white;
-		}
-	}
-	.settings {
-		text-indent:-9999px;
-		background:url(img/settings.png) no-repeat;
-		width:28px;
-		height:28px;
-		float:right;
-		opacity:.2;
-		background-size:100%;
-		@include transition(all .25s 4ms both ease-in-out);
-		&:hover {
-			opacity:.5;
-		}
-	}
-}:
-@linei:@options{ :@children[o:Sass::Tree::ImportNode
-;0:@imported_filename"compass/css3;i;	@;
-[ o;
-;0;"compass/reset;i;	@;
-[ o:Sass::Tree::CommentNode
-:
-@type:normal:@value["?/*----------------------
-Partials
-----------------------*/;i	;	@;
-[ o;
-;0;"partials/animation;i;	@;
-[ o;
-;0;"partials/animation/animate;i;	@;
-[ o;
-;;;["@/* =====================
-variables
-======================*/;i;	@;
-[ o:Sass::Tree::VariableNode:
-@name"bg:@guarded0;i;	@;
-[ :
-@expro:Sass::Script::Color	:@attrs{	:redi:
-alphai:
-greeni:	bluei;0;i;	@o;;"dropHeight;0;i;	@;
-[ ;o:Sass::Script::Number:@denominator_units[ :@numerator_units["px;i2:@original"	45px;i;	@o;;"	logo;0;i;	@;
-[ ;o:Sass::Script::String	;:string;"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMkAAAAmCAYAAABu1L9SAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxOTY4QUM1RUQxMTIxMUUxOUUwM0U1NUEyMDQ5QzQzNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxOTY4QUM1RkQxMTIxMUUxOUUwM0U1NUEyMDQ5QzQzNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjE5NjhBQzVDRDExMjExRTE5RTAzRTU1QTIwNDlDNDM2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjE5NjhBQzVERDExMjExRTE5RTAzRTU1QTIwNDlDNDM2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+GCfpTgAAE7hJREFUeNrsXHtw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;i;	@o;;"picWidth;0;i;	@;
-[ ;o;;[ ;["px;iú;"
-250px;i;	@o;;"picMargin;0;i;	@;
-[ ;o:Sass::Script::Operation
-:@operand2o;;[ ;[ ;i;"6;i;	@:@operator:div;i;	@:@operand1o:Sass::Script::Variable	;"picWidth;i;	@:@underscored_name"picWidtho;;"wrapWidth;0;i;	@;
-[ ;o;!
-;"o;!
-;"o;;@<;[ ;i;"2;i;	@;#:
-times;i;	@;%o;&	;"picMargin;i;	@;'"picMargin;#:	plus;i;	@;%o;!
-;"o;;@<;[ ;i;"3;i;	@;#;(;i;	@;%o;&	;"picWidth;i;	@;'"picWidtho;
-;;;["A/* =====================
-app styles
-======================*/;i;	@;
-[ o:Sass::Tree::RuleNode;T:
-@rule["	body:@parsed_ruleso:"Sass::Selector::CommaSequence:@members[o:Sass::Selector::Sequence;.[o:#Sass::Selector::SimpleSequence	;.[o:Sass::Selector::Element	;["	body:@filename" :@namespace0;i:@sourceso:Set:
-@hash{ ;2@d;i;2@d;i;i:
-@tabsi ;	@;
-[o:Sass::Tree::PropNode;["background-color:@prop_syntax:new;o;&	;"bg;i;	@;'"bg;i;7i ;	@;
-[ o;8;["font-family;9;:;o;;:identifier;"'Open Sans', sans-serif;	@;i;7i ;	@;
-[ o;8;["letter-spacing;9;:;o;;[ ;["em;f-0.01 {;"-0.01em;i ;	@;i ;7i ;	@;
-[ o;8;["background-image;9;:;o:Sass::Script::List	:@separator:
-comma;[o;	;;;;"url(img/bg.png);i!;	@o;	;;;;"url(img/bgPat.png);i!;	@;i!;	@;i!;7i ;	@;
-[ o;
-;:silent;["(/*background:url(img/bgPat.png); */;i";	@;
-[ o;8;["background-position;9;:;o;<	;=;>;[o;<	;=:
-space;[o;	;;;;"center;i#;	@o;;[ ;["px;iñ;"
--10px;i#;	@;i#;	@o;<	;=;@;[o;;@<;[ ;i ;"0;i#;	@o;;@<;[ ;i ;"0;i#;	@;i#;	@;i#;	@;i#;7i ;	@;
-[ o;8;["background-repeat;9;:;o;;;;;"no-repeat, repeat;	@;i$;7i ;	@;
-[ o;*;T;+["
-.wrap;,o;-;.[o;/;.[o;0	;.[o:Sass::Selector::Class;["	wrap;2" ;i&;4o;5;6{ ;2@±;i&;2@±;i&;i&;7i ;	@;
-[o;8;["
-width;9;:;o;&	;"wrapWidth;i';	@;'"wrapWidth;i';7i ;	@;
-[ o;8;["margin;9;:;o;;;;;"	auto;	@;i(;7i ;	@;
-[ o;*;T;+["
-.head;,o;-;.[o;/;.[o;0	;.[o;A;["	head;2" ;i+;4o;5;6{ ;2@Î;i+;2@Î;i+;i+;7i ;	@;
-[
-o;8;["padding;9;:;o;<	;=;@;[o;&	;"picMargin;i,;	@;'"picMargino;;@<;[ ;i ;"0;i,;	@;i,;	@;i,;7i ;	@;
-[ o;8;["overflow;9;:;o;;;;;"hidden;	@;i-;7i ;	@;
-[ o;8;["margin-bottom;9;:;o;!
-;"o;;@<;[ ;i;"2;i.;	@;#;$;i.;	@;%o;&	;"picMargin;i.;	@;'"picMargin;i.;7i ;	@;
-[ o;*;T;+["
-.logo;,o;-;.[o;/;.[o;0	;.[o;A;["	logo;2" ;i/;4o;5;6{ ;2@û;i/;2@û;i/;i/;7i ;	@;
-[o;8;["background;9;:;o;<	;=;@;[o;	;;;;"url(img/logob.png);i0;	@o;	;;;;"no-repeat;i0;	@;i0;	@;i0;7i ;	@;
-[ o;8;["
-width;9;:;o;;;;;"
-100px;	@;i1;7i ;	@;
-[ o;8;["height;9;:;o;;;;;"	30px;	@;i2;7i ;	@;
-[ o;8;["margin;9;:;o;;;;;"	auto;	@;i3;7i ;	@;
-[ o;8;["text-indent;9;:;o;;[ ;["px;iþñØ;"-9999px;i4;	@;i4;7i ;	@;
-[ o;8;["
-float;9;:;o;;;;;"	left;	@;i5;7i ;	@;
-[ o:Sass::Tree::MixinNode:@keywords{ ;"animation;i6;	@;
-[ :
-@args[o;	;;;;"fadeInDown;i6;	@o;8;["-webkit-animation-duration;9;:;o;;;;;"1s;	@;i7;7i ;	@;
-[ o;8;[" -webkit-animation-fill-mode;9;:;o;;;;;"	both;	@;i8;7i ;	@;
-[ o;8;["background-size;9;:;o;;;;;"	100%;	@;i9;7i ;	@;
-[ o;*;T;+[".loggedIn;,o;-;.[o;/;.[o;0	;.[o;A;["loggedIn;2" ;i;;4o;5;6{ ;2@O;i;;2@O;i;;i;;7i ;	@;
-[o;8;["
-float;9;:;o;;;;;"
-right;	@;i<;7i ;	@;
-[ o;8;["
-width;9;:;o;;;;;"40%;	@;i=;7i ;	@;
-[ o;B;C{ ;"animation;i>;	@;
-[ ;D[o;	;;;;"fadeInRight;i>;	@o;8;["-webkit-animation-duration;9;:;o;;;;;"1s;	@;i?;7i ;	@;
-[ o;8;[" -webkit-animation-fill-mode;9;:;o;;;;;"	both;	@;i@;7i ;	@;
-[ o;*;T;+[".avatar;,o;-;.[o;/;.[o;0	;.[o;A;["avatar;2" ;iA;4o;5;6{ ;2@~;iA;2@~;iA;iA;7i ;	@;
-[
-o;8;["height;9;:;o;;;;;"	30px;	@;iB;7i ;	@;
-[ o;8;["border-radius;9;:;o;;;;;"3px;	@;iC;7i ;	@;
-[ o;8;["
-float;9;:;o;;;;;"
-right;	@;iD;7i ;	@;
-[ o;B;C{ ;"box-shadow;iE;	@;
-[ ;D[o;<	;=;@;[
-o;	;;;;"
-inset;iE;	@o;;@<;[ ;i ;"0;iE;	@o;;[ ;["px;i;"1px;iE;	@o;;@<;[ ;i ;"0;iE;	@o;	;{	;iÿ;i;iÿ;iÿ;0;iE;	@;iE;	@o;8;["margin-left;9;:;o;;;;;"5px;	@;iF;7i ;	@;
-[ o;*;T;+["
-.name;,o;-;.[o;/;.[o;0	;.[o;A;["	name;2" ;iH;4o;5;6{ ;2@¼;iH;2@¼;iH;iH;7i ;	@;
-[	o;8;["text-align;9;:;o;;;;;"
-right;	@;iI;7i ;	@;
-[ o;8;["
-color;9;:;o;;;;;"	#fff;	@;iJ;7i ;	@;
-[ o;8;["font-weight;9;:;o;;;;;"700;	@;iK;7i ;	@;
-[ o;8;["font-size;9;:;o;;;;;"80%;	@;iL;7i ;	@;
-[ o;*;T;+[".stats;,o;-;.[o;/;.[o;0	;.[o;A;["
-stats;2" ;iN;4o;5;6{ ;2@ä;iN;2@ä;iN;iN;7i ;	@;
-[o;8;["text-align;9;:;o;;;;;"
-right;	@;iO;7i ;	@;
-[ o;8;["
-color;9;:;o;;;;;"	#ccc;	@;iP;7i ;	@;
-[ o;8;["font-size;9;:;o;;;;;"70%;	@;iQ;7i ;	@;
-[ o;*;T;+["
-.pics;,o;-;.[o;/;.[o;0	;.[o;A;["	pics;2" ;iV;4o;5;6{ ;2@;iV;2@;iV;iV;7i ;	@;
-[o;*;T;+["ul;,o;-;.[o;/;.[o;0	;.[o;1	;["ul;2" ;30;iW;4o;5;6{ ;2@;iW;2@;iW;iW;7i ;	@;
-[o;B;C{ ;"animation;iX;	@;
-[ ;D[o;<	;=;@;[o;	;;;;"fadeInUp;iX;	@o;;[ ;["s;i;"1s;iX;	@o;	;;;;"ease-in;iX;	@;iX;	@o;*;T;+["li;,o;-;.[o;/;.[o;0	;.[o;1	;["li;2" ;30;iY;4o;5;6{ ;2@6;iY;2@6;iY;iY;7i ;	@;
-[o;8;["-webkit-transform;9;:;o:Sass::Script::Funcall
-;C{ ;"rotate3d;iZ;	@;D[	o;;@<;[ ;i ;"0;iZ;	@o;;@<;[ ;i ;"0;iZ;	@o;;@<;[ ;i ;"0;iZ;	@o;;@<;[ ;i ;"0;iZ;	@;iZ;7i ;	@;
-[ o;8;["
-width;9;:;o;&	;"picWidth;i[;	@;'"picWidth;i[;7i ;	@;
-[ o;8;["height;9;:;o;!
-;"o;!
-;"o;;@<;[ ;i;"3;i\;	@;#;$;i\;	@;%o;&	;"picMargin;i\;	@;'"picMargin;#;);i\;	@;%o;!
-;"o;&	;"picMargin;i\;	@;'"picMargin;#;);i\;	@;%o;&	;"picWidth;i\;	@;'"picWidth;i\;7i ;	@;
-[ o;8;["
-float;9;:;o;;;;;"	left;	@;i];7i ;	@;
-[ o;8;["padding-right;9;:;o;&	;"picMargin;i^;	@;'"picMargin;i^;7i ;	@;
-[ o;8;["position;9;:;o;;;;;"relative;	@;i_;7i ;	@;
-[ o;*;T;+["&.animate;,o;-;.[o;/;.[o;0	;.[o:Sass::Selector::Parent;2" ;i`o;A;["animate;2@…;i`;4o;5;6{ ;2@…;i`;2@…;i`;i`;7i ;	@;
-[o;8;["-webkit-animation-duration;9;:;o;;;;;"1s;	@;ia;7i ;	@;
-[ o;8;[" -webkit-animation-fill-mode;9;:;o;;;;;"	both;	@;ib;7i ;	@;
-[ o;*;T;+["&.fadeInUp;,o;-;.[o;/;.[o;0	;.[o;F;2" ;ido;A;["fadeInUp;2@¢;id;4o;5;6{ ;2@¢;id;2@¢;id;id;7i ;	@;
-[o;B;C{ ;"animation-name;if;	@;
-[ ;D[o;	;;;;"fadeInUp;ie;	@o;*;T;+["&.bounceIn;,o;-;.[o;/;.[o;0	;.[o;F;2" ;igo;A;["bounceIn;2@º;ig;4o;5;6{ ;2@º;ig;2@º;ig;ig;7i ;	@;
-[o;B;C{ ;"animation-name;ih;	@;
-[ ;D[o;	;;;;"bounceIn;ih;	@o;*;T;+["&:nth-child(3n+3);,o;-;.[o;/;.[o;0	;.[o;F;2" ;ijo:Sass::Selector::Pseudo
-;["nth-child;:
-class;2@Ò;ij:	@arg["	3n+3;4o;5;6{ ;2@Ò;ij;2@Ò;ij;ij;7i ;	@;
-[o;8;["padding-right;9;:;o;;;;;"0;	@;ik;7i ;	@;
-[ o;*;T;+[".highlight;,o;-;.[o;/;.[o;0	;.[o;A;["highlight;2" ;im;4o;5;6{ ;2@í;im;2@í;im;im;7i ;	@;
-[o;8;["position;9;:;o;;;;;"relative;	@;in;7i ;	@;
-[ o;*;T;+["img;,o;-;.[o;/;.[o;0	;.[o;1	;["img;2" ;30;ip;4o;5;6{ ;2@;ip;2@;ip;ip;7i ;	@;
-[o;8;["
-width;9;:;o;&	;"picWidth;iq;	@;'"picWidth;iq;7i ;	@;
-[ o;8;["height;9;:;o;&	;"picWidth;ir;	@;'"picWidth;ir;7i ;	@;
-[ o;8;["border-radius;9;:;o;;;;;"1px;	@;is;7i ;	@;
-[ o;8;["position;9;:;o;;;;;"relative;	@;it;7i ;	@;
-[ o;8;["top;9;:;o;;;;;"0;	@;iu;7i ;	@;
-[ o;8;["	left;9;:;o;;;;;"0;	@;iv;7i ;	@;
-[ o;8;["z-index;9;:;o;;;;;"5;	@;iw;7i ;	@;
-[ o;B;C{ ;"transition;ix;	@;
-[ ;D[o;<	;=;@;[o;	;;;;"all;ix;	@o;;[ ;["s;f0.29999999999999999 33;"	0.3s;ix;	@o;	;;;;"ease-in-out;ix;	@;ix;	@o;*;T;+["+ a;,o;-;.[o;/;.["+o;0	;.[o;1	;["a;2" ;30;iy;4o;5;6{ ;2@Q;iy;2@Q;iy;iy;7i ;	@;
-[o;8;["box-shadow;9;:;o;<	;=;@;[
-o;	;;;;"
-inset;iz;	@o;;[ ;["px;i ;"0px;iz;	@o;;[ ;["px;i;"1px;iz;	@o;;[ ;["px;i ;"0px;iz;	@o;E
-;C{ ;"	rgba;iz;	@;D[	o;;@<;[ ;iÿ;"255;iz;	@o;;@<;[ ;iÿ;"255;iz;	@o;;@<;[ ;iÿ;"255;iz;	@o;;@<;[ ;f0.5;"0.5;iz;	@;iz;	@;iz;7i ;	@;
-[ o;8;["position;9;:;o;;;;;"absolute;	@;i{;7i ;	@;
-[ o;8;["
-width;9;:;o;&	;"picWidth;i|;	@;'"picWidth;i|;7i ;	@;
-[ o;8;["height;9;:;o;&	;"picWidth;i};	@;'"picWidth;i};7i ;	@;
-[ o;8;["top;9;:;o;;;;;"0;	@;i~;7i ;	@;
-[ o;8;["	left;9;:;o;;;;;"0;	@;i;7i ;	@;
-[ o;8;["z-index;9;:;o;;;;;"6;	@;i{;7i ;	@;
-[ o;B;C{ ;"transition;i|;	@;
-[ ;D[o;<	;=;@;[o;	;;;;"all;i|;	@o;;[ ;["s;f0.29999999999999999 33;"	0.3s;i|;	@o;	;;;;"ease-in-out;i|;	@;i|;	@o;*;T;+["&.reveal;,o;-;.[o;/;.[o;0	;.[o;F;2" ;i}o;A;["reveal;2@¾;i};4o;5;6{ ;2@¾;i};2@¾;i};i};7i ;	@;
-[o;8;["top;9;:;o;&	;"dropHeight;i~;	@;'"dropHeight;i~;7i ;	@;
-[ o;*;T;+["&.reveal;,o;-;.[o;/;.[o;0	;.[o;F;2" ;io;A;["reveal;2@Ö;i;4o;5;6{ ;2@Ö;i;2@Ö;i;i;7i ;	@;
-[o;8;["top;9;:;o;&	;"dropHeight;i‚;	@;'"dropHeight;i‚;7i ;	@;
-[ o;*;T;+["
-.user;,o;-;.[o;/;.[o;0	;.[o;A;["	user;2" ;i‰;4o;5;6{ ;2@ð;i‰;2@ð;i‰;i‰;7i ;	@;
-[o;8;["z-index;9;:;o;;;;;"1;	@;iŠ;7i ;	@;
-[ o;8;["position;9;:;o;;;;;"absolute;	@;i‹;7i ;	@;
-[ o;8;["top;9;:;o;;;;;"0;	@;iŒ;7i ;	@;
-[ o;8;["	left;9;:;o;;;;;"0;	@;i;7i ;	@;
-[ o;8;["height;9;:;o;!
-;"o;;[ ;["px;i;"	20px;iŽ;	@;#:
-minus;iŽ;	@;%o;&	;"dropHeight;iŽ;	@;'"dropHeight;iŽ;7i ;	@;
-[ o;8;["padding;9;:;o;;;;;"10px 0;	@;i;7i ;	@;
-[ o;8;["
-width;9;:;o;&	;"picWidth;i;	@;'"picWidth;i;7i ;	@;
-[ o;*;T;+["img;,o;-;.[o;/;.[o;0	;.[o;1	;["img;2" ;30;i‘;4o;5;6{ ;2@2;i‘;2@2;i‘;i‘;7i ;	@;
-[	o;8;["height;9;:;o;;;;;"	25px;	@;i’;7i ;	@;
-[ o;8;["border-radius;9;:;o;;;;;"3px;	@;i“;7i ;	@;
-[ o;8;["
-float;9;:;o;;;;;"	left;	@;i”;7i ;	@;
-[ o;B;C{ ;"box-shadow;i•;	@;
-[ ;D[o;<	;=;@;[
-o;	;;;;"
-inset;i•;	@o;;@<;[ ;i ;"0;i•;	@o;;[ ;["px;i;"1px;i•;	@o;;@<;[ ;i ;"0;i•;	@o;	;{	;iÿ;i;iÿ;iÿ;0;i•;	@;i•;	@o;*;T;+["span.name;,o;-;.[o;/;.[o;0	;.[o;1	;["	span;2" ;30;i—o;A;["	name;2@j;i—;4o;5;6{ ;2@j;i—;2@j;i—;i—;7i ;	@;
-[
-o;8;["
-color;9;:;o;;;;;"	#fff;	@;i˜;7i ;	@;
-[ o;8;["font-weight;9;:;o;;;;;"	bold;	@;i™;7i ;	@;
-[ o;8;["
-float;9;:;o;;;;;"	left;	@;iš;7i ;	@;
-[ o;8;["font-size;9;:;o;;;;;"80%;	@;i›;7i ;	@;
-[ o;8;["padding;9;:;o;;;;;"4px 0 0 5px;	@;iœ;7i ;	@;
-[ o;*;T;+["
-.like;,o;-;.[o;/;.[o;0	;.[o;A;["	like;2" ;iŸ;4o;5;6{ ;2@›;iŸ;2@›;iŸ;iŸ;7i ;	@;
-[o;8;["
-width;9;:;o;;;;;"	25px;	@;i ;7i ;	@;
-[ o;8;["height;9;:;o;;;;;"	24px;	@;i¡;7i ;	@;
-[ o;8;["background;9;:;o;<	;=;@;[	o;	;;;;"url(img/heart.png);i¢;	@o;	;;;;"center;i¢;	@o;	;;;;"top;i¢;	@o;	;;;;"no-repeat;i¢;	@;i¢;	@;i¢;7i ;	@;
-[ o;8;["
-float;9;:;o;;;;;"
-right;	@;i£;7i ;	@;
-[ o;8;["display;9;:;o;;;;;"inline-block;	@;i¤;7i ;	@;
-[ o;8;["cursor;9;:;o;;;;;"pointer;	@;i¥;7i ;	@;
-[ o;*;T;+["&:hover;,o;-;.[o;/;.[o;0	;.[o;F;2" ;i¦o;G
-;["
-hover;;H;2@Õ;i¦;I0;4o;5;6{ ;2@Õ;i¦;2@Õ;i¦;i¦;7i ;	@;
-[o;8;["background;9;:;o;<	;=;@;[	o;	;;;;"url(img/heart.png);i§;	@o;	;;;;"center;i§;	@o;	;;;;"bottom;i§;	@o;	;;;;"no-repeat;i§;	@;i§;	@;i§;7i ;	@;
-[ o;*;T;+[".heartAni;,o;-;.[o;/;.[o;0	;.[o;A;["heartAni;2" ;iª;4o;5;6{ ;2@ö;iª;2@ö;iª;iª;7i ;	@;
-[o;8;["
-width;9;:;o;;;;;"	25px;	@;i«;7i ;	@;
-[ o;8;["height;9;:;o;;;;;"	24px;	@;i¬;7i ;	@;
-[ o;8;["background-image;9;:;o;	;;;;"url(img/heartLrg.png);i­;	@;i­;7i ;	@;
-[ o;8;["background-repeat;9;:;o;;;;;"no-repeat;	@;i®;7i ;	@;
-[ o;8;["background-size;9;:;o;;;;;"	100%;	@;i¯;7i ;	@;
-[ o;8;["position;9;:;o;;;;;"absolute;	@;i°;7i ;	@;
-[ o;
-;;?;[" /* for when Chrome supports animates on after classes 
- *
- *@include animation(fadeOut);
- *-webkit-animation-duration:2s;
- *-webkit-animation-fill-mode:both; */;i±;	@;
-[ o;*;T;+[".footer;,o;-;.[o;/;.[o;0	;.[o;A;["footer;2" ;iº;4o;5;6{ ;2@.;iº;2@.;iº;iº;7i ;	@;
-[
-o;8;["
-width;9;:;o;;;;;"	100%;	@;i»;7i ;	@;
-[ o;8;["overflow;9;:;o;;;;;"hidden;	@;i¼;7i ;	@;
-[ o;B;C{ ;"animation;i½;	@;
-[ ;D[o;<	;=;@;[o;	;;;;"fadeInUp;i½;	@o;;[ ;["s;f1.5;"	1.5s;i½;	@o;	;;;;"ease-in;i½;	@;i½;	@o;*;T;+["
-.more;,o;-;.[o;/;.[o;0	;.[o;A;["	more;2" ;i¾;4o;5;6{ ;2@[;i¾;2@[;i¾;i¾;7i ;	@;
-[o;8;["border;9;:;o;<	;=;@;[o;;[ ;["px;i;"1px;i¿;	@o;	;;;;"
-solid;i¿;	@o;E
-;C{ ;"lighten;i¿;	@;D[o;&	;"bg;i¿;	@;'"bgo;;[ ;["%;i;"3%;i¿;	@;i¿;	@;i¿;7i ;	@;
-[ o;8;["font-weight;9;:;o;;;;;"700;	@;iÀ;7i ;	@;
-[ o;8;["font-size;9;:;o;;;;;"	12px;	@;iÁ;7i ;	@;
-[ o;8;["padding;9;:;o;;;;;"7px 10px;	@;iÂ;7i ;	@;
-[ o;8;["white-space;9;:;o;;;;;"nowrap;	@;iÃ;7i ;	@;
-[ o;8;["vertical-align;9;:;o;;;;;"middle;	@;iÄ;7i ;	@;
-[ o;8;["
-color;9;:;o;E
-;C{ ;"lighten;iÅ;	@;D[o;&	;"bg;iÅ;	@;'"bgo;;[ ;["%;i;"10%;iÅ;	@;iÅ;7i ;	@;
-[ o;8;["background;9;:;o;;;;;"transparent;	@;iÆ;7i ;	@;
-[ o;8;["cursor;9;:;o;;;;;"pointer;	@;iÇ;7i ;	@;
-[ o;8;["border-radius;9;:;o;;;;;"3px;	@;iÈ;7i ;	@;
-[ o;8;["border;9;:;o;<	;=;@;[o;;[ ;["px;i;"1px;iÉ;	@o;	;;;;"
-solid;iÉ;	@o;E
-;C{ ;"lighten;iÉ;	@;D[o;&	;"bg;iÉ;	@;'"bgo;;[ ;["%;i
-;"5%;iÉ;	@;iÉ;	@;iÉ;7i ;	@;
-[ o;B;C{ ;"box-shadow;iÊ;	@;
-[ ;D[o;<	;=;@;[	o;;@<;[ ;i ;"0;iÊ;	@o;;[ ;["px;i;"1px;iÊ;	@o;;@<;[ ;i ;"0;iÊ;	@o;E
-;C{ ;"lighten;iÊ;	@;D[o;&	;"bg;iÊ;	@;'"bgo;;[ ;["%;i;"10%;iÊ;	@;iÊ;	@o;
-;;?;["4/*@include transition(all .15s ease-in-out); */;iË;	@;
-[ o;8;["display;9;:;o;;;;;"
-block;	@;iÌ;7i ;	@;
-[ o;8;["position;9;:;o;;;;;"absolute;	@;iÍ;7i ;	@;
-[ o;8;["	left;9;:;o;;;;;"50%;	@;iÎ;7i ;	@;
-[ o;8;["margin-left;9;:;o;;[ ;["px;iÝ;"
--30px;iÏ;	@;iÏ;7i ;	@;
-[ o;8;["text-decoration;9;:;o;;;;;"	none;	@;iÐ;7i ;	@;
-[ o;*;T;+["&:hover;,o;-;.[o;/;.[o;0	;.[o;F;2" ;iÑo;G
-;["
-hover;;H;2@;iÑ;I0;4o;5;6{ ;2@;iÑ;2@;iÑ;iÑ;7i ;	@;
-[o;8;["border-color;9;:;o;;;;;"	#999;	@;iÒ;7i ;	@;
-[ o;8;["background;9;:;o;E
-;C{ ;"-webkit-linear-gradient;iÓ;	@;D[o;	;;;;"top;iÓ;	@o;	;{	;iÿ;i;iÿ;iÿ;0;iÓ;	@o;	;{	;ià;i;ià;ià;0;iÓ;	@;iÓ;7i ;	@;
-[ o;8;["box-shadow;9;:;o;<	;=;>;[o;<	;=;@;[	o;;@<;[ ;i ;"0;iÔ;	@o;;[ ;["px;i;"1px;iÔ;	@o;;[ ;["px;i;"2px;iÔ;	@o;E
-;C{ ;"	rgba;iÔ;	@;D[	o;;@<;[ ;i ;"0;iÔ;	@o;;@<;[ ;i ;"0;iÔ;	@o;;@<;[ ;i ;"0;iÔ;	@o;;@<;[ ;f0.5;"0.5;iÔ;	@;iÔ;	@o;<	;=;@;[
-o;	;;;;"
-inset;iÔ;	@o;;@<;[ ;i ;"0;iÔ;	@o;;@<;[ ;i ;"0;iÔ;	@o;;[ ;["px;i;"3px;iÔ;	@o;	;{	;iÿ;i;iÿ;iÿ;0;iÔ;	@;iÔ;	@;iÔ;	@;iÔ;7i ;	@;
-[ o;8;["text-decoration;9;:;o;;;;;"	none;	@;iÕ;7i ;	@;
-[ o;8;["
-color;9;:;o;E
-;C{ ;"lighten;iÖ;	@;D[o;&	;"bg;iÖ;	@;'"bgo;;[ ;["%;i;"20%;iÖ;	@;iÖ;7i ;	@;
-[ o;8;["text-shadow;9;:;o;;;;;"0 1px 1px white;	@;i×;7i ;	@;
-[ o;*;T;+[".settings;,o;-;.[o;/;.[o;0	;.[o;A;["settings;2" ;iÚ;4o;5;6{ ;2@˜;iÚ;2@˜;iÚ;iÚ;7i ;	@;
-[o;8;["text-indent;9;:;o;;[ ;["px;iþñØ;"-9999px;iÛ;	@;iÛ;7i ;	@;
-[ o;8;["background;9;:;o;<	;=;@;[o;	;;;;"url(img/settings.png);iÜ;	@o;	;;;;"no-repeat;iÜ;	@;iÜ;	@;iÜ;7i ;	@;
-[ o;8;["
-width;9;:;o;;;;;"	28px;	@;iÝ;7i ;	@;
-[ o;8;["height;9;:;o;;;;;"	28px;	@;iÞ;7i ;	@;
-[ o;8;["
-float;9;:;o;;;;;"
-right;	@;iß;7i ;	@;
-[ o;8;["opacity;9;:;o;;;;;".2;	@;ià;7i ;	@;
-[ o;8;["background-size;9;:;o;;;;;"	100%;	@;iá;7i ;	@;
-[ o;B;C{ ;"transition;iâ;	@;
-[ ;D[o;<	;=;@;[
-o;	;;;;"all;iâ;	@o;;[ ;["s;f	0.25;"
-0.25s;iâ;	@o;;[ ;["ms;i	;"4ms;iâ;	@o;	;;;;"	both;iâ;	@o;	;;;;"ease-in-out;iâ;	@;iâ;	@o;*;T;+["&:hover;,o;-;.[o;/;.[o;0	;.[o;F;2" ;ião;G
-;["
-hover;;H;2@ï;iã;I0;4o;5;6{ ;2@ï;iã;2@ï;iã;iã;7i ;	@;
-[o;8;["opacity;9;:;o;;;;;".5;	@;iä;7i ;	@;
-[ 

@@ -7,10 +7,11 @@ variables
 $bg:			#131214;
 $dropHeight: 	45px;
 $logo:          'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMkAAAAmCAYAAABu1L9SAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxOTY4QUM1RUQxMTIxMUUxOUUwM0U1NUEyMDQ5QzQzNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxOTY4QUM1RkQxMTIxMUUxOUUwM0U1NUEyMDQ5QzQzNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjE5NjhBQzVDRDExMjExRTE5RTAzRTU1QTIwNDlDNDM2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjE5NjhBQzVERDExMjExRTE5RTAzRTU1QTIwNDlDNDM2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+GCfpTgAAE7hJREFUeNrsXHtw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';
-$picWidth:      280px;
-$picMargin:     $picWidth / 6;
+$picWidth:      400px;
+$picMargin:     $picWidth / 20;
 $wrapWidth:     ($picWidth * 3) + ($picMargin * 2);
-$blue:			#68a4f5;
+$blue:			#3e97f2;
+$pink:          #ec1350;
 
 
 /*----------------------
@@ -20,17 +21,124 @@ Partials
 @import "partials/animation/animate";
 @import "partials/flipper";
 
+/*----------------------
+Keyframes
+----------------------*/
+@include keyframes(avatar) {
+	0% {
+		@include transform(translateY(-20px) rotate(60deg));
+		opacity: 0;
+	}
+	100% {
+		@include transform(translateY(0px) rotate(0));
+		opacity: 1;
+	}
+}
+
+@include keyframes(fadeRight) {
+	0% {
+		@include transform(translateX(20px));
+		opacity: 0;
+	}
+	100% {
+		@include transform(translateX(0px));
+		opacity: 1;
+	}
+}
+
+/* =====================
+Mixins
+======================*/
+
+@mixin btn($baseColor, $textColor, $fontSize) {
+	cursor: pointer;
+	display:inline-block;
+	padding: ($fontSize / .9) $fontSize + .5;
+	margin-top: 2em;
+	text-transform:uppercase;
+	width: 85%;
+	text-align: center;
+	font-size: $fontSize;
+	border:1px solid darken($baseColor, 15%);
+	background:$baseColor;
+	@include background(linear-gradient(top, lighten($baseColor, 5%), $baseColor));
+	@include border-radius(3px);
+	@include box-shadow(inset 0 0px 2px lighten($baseColor, 25%));
+	@include text-shadow(0 1px 0 darken($baseColor, 25%));
+	@include transition(all .05s ease-in-out);
+	color:$textColor;
+	&:hover {
+		@include background(linear-gradient(top, lighten($baseColor, 10%), $baseColor));
+		@include box-shadow(inset 0 1px 0 lighten($baseColor, 5%));
+	}
+	&:active { // Adds Styles When Button Is Pushed
+			@include background(linear-gradient(top, darken($baseColor, 5%), $baseColor));
+			@include box-shadow(inset 0 0px 2px darken($baseColor, 35%));
+			border-color: darken($baseColor, 18%);
+			color: darken($baseColor, 25%);
+			@include text-shadow(0 1px 0 lighten($baseColor, 5%));
+	}
+}
+
 /* =====================
 app styles
 ======================*/
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot');
+	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.svg#icomoon') format('svg'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: 'icomoon';
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-cc-by:before {
+	content: "\21";
+}
+.icon-heart:before {
+	content: "\22";
+}
+.icon-star:before {
+	content: "\23";
+}
+.icon-users:before {
+	content: "\24";
+}
+.icon-question-mark:before {
+	content: "\25";
+}
+
 body {
 	background-color:$bg;
 	font-family: 'Open Sans', sans-serif;
 	letter-spacing:-.01em;
-	background-image:url(img/bg.png), url(img/bgPat.png);
+	background-image:url(img/bg-noLogo.png), url(img/bgPat.png);
 	//background:url(img/bgPat.png);
 	background-position:center -10px, 0 0;
 	background-repeat:no-repeat, repeat;
+	text-align: center;
 }
 
 a {
@@ -43,26 +151,85 @@ a {
 }
 
 .wrap {
-	width:$wrapWidth;
+	//width:$wrapWidth;
+	width: 100%;
 	margin:auto;
 }
 
 .head {
-	padding:$picMargin 0;
+	padding: 10px 0;
+	@include background-image(linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)));
+	border-bottom:1px solid rgba(0, 0, 0, .9);
+	@include box-shadow(inset 0 -1px 0 rgba(255, 255, 255, .2));
+	position: fixed;
 	overflow:hidden;
-	margin-bottom:$picMargin / 2;
-	.logo {
-		background:url(img/logob.png) no-repeat;
-		width:100px;
-		height:30px;
-		margin:auto;
-		text-indent:-9999px;
-		float:left;
-		@include animation(fadeInDown);
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	@include animation(fadeInDown);
 		-webkit-animation-duration:1s;
 		-webkit-animation-fill-mode:both;
+	.logo {
+		background:url(img/logo.png) no-repeat;
+		width:122px;
+		height:20px;
+		margin:3px 10px;
+		text-indent:-9999px;
+		float:left;
 		background-size:100%;
 	}
+	.user {
+		float: left;
+		input {
+			background: transparent;
+			border: none;
+			outline: none;
+			color: $pink;
+			font-size: .8em;
+			padding: .3em;
+		}
+		
+	}
+	ul.nav {
+		float: right;
+		padding-right: 3em;
+		position: relative;
+		li {
+			display: inline-block;
+			padding: .3em .15em;
+			color: #fff;
+			font-size: .9em;
+			font-weight: 600;
+			cursor: pointer;
+			a {
+				color: white;
+				font-size: 1.5em;
+				cursor: pointer;
+			}
+			&.active {
+				color: $pink;
+			}
+			&.settings {
+				-webkit-mask: url('img/settings.png') no-repeat center center;
+				 -webkit-mask-size: 12px 12px;
+				position: absolute;
+				right: 17px;
+				top: 3px;
+				width: 12px;
+				height: 12px;
+				background-size: 100%;
+				padding: .1em;
+				margin-left: .5em;
+				background-color: #ccc;
+				&:hover, &.active {
+					background-color: $pink;
+				}
+			}
+		}
+	}
+
 	.loggedIn {
 		float:right;
 		width:40%;
@@ -96,16 +263,18 @@ a {
 
 .pics {
 	//overflow:hidden;
-	ul {
+	margin-top: 50px;
+	#picsList {
 		@include animation(fadeInUp 1s ease-in);
-		li {
+		margin: auto;
+		width: 100%;
+		> div {
 			-webkit-transform: rotate3d(0,0,0,0);
 			width:$picWidth;
-			//height:$picWidth + $picMargin + ($picMargin / 3);
-			margin-bottom:$picMargin;
-			float:left;
-			padding-right:$picMargin - 1;
+			margin: 8px;
+			display: inline-block;
 			position:relative;
+			background: url('img/ajax-loader.gif') center center no-repeat;
 			&.animate {
 				-webkit-animation-duration:1s;
 				-webkit-animation-fill-mode:both;
@@ -121,9 +290,33 @@ a {
 			}
 			.picture {
 				position:relative;
+				img {
+					@include box-shadow(inset 0 1px 0 #fff);
+				}
 			}
 			
 		}
+	}
+}
+
+.gradient {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	@include background-image(radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .75)));
+	@include transition(all .50s cubic-bezier(0.000, 0.910, 0.395, 1.3));
+	a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	&:hover {
+		opacity: 1;
 	}
 }
 
@@ -180,12 +373,14 @@ Settings Styles
 ======================*/
 
 .overlay {
-	position:absolute;
+	position:fixed;
 	top:0;
 	left:0;
 	right:0;
 	bottom:0;
 	display:none;
+	background: #000;
+	opacity: .5;
 }
 
 .content {
@@ -194,12 +389,7 @@ Settings Styles
 	margin:auto;
 	margin-top:5%;
 	z-index:100;
-	&.in {
-		@include animation(fadeInDown 1s 500ms both cubic-bezier(0, 0, .45, 1));
-	}
-	&.out {
-		@include animation(fadeOutUp .5s 0ms both cubic-bezier(0, 0, .45, 1));
-	}
+	text-align: left;
 	input {
 		border:0;
 		background:transparent;
@@ -224,13 +414,12 @@ Settings Styles
 	h2 {
 		font-weight:200;
 		font-size:3em;
-		padding-top:1em;
+		padding-top: 1.5em;
 		color:#fff;
 	}
 	p {
 		color:#ccc;
 		padding-top:1em;
-		width:65%;
 		line-height:1.4em;
 		&.subInfo {
 			font-size:.8em;
@@ -263,6 +452,125 @@ Settings Styles
 	background:#000;
 	opacity:.95;
 	z-index:50;
+}
+
+/*------------------------
+Setting Styles
+-------------------------*/
+.settingsPop {
+	position: fixed;
+	top: 60px;
+	right: 10px;
+	display: none;
+	@include background-image(linear-gradient(lighten(#000, 7%), lighten(#000, 3%)));
+	border:1px solid #000;
+	padding: 20px;
+	border-radius: 3px;
+	//box-shadow: 0 1px 3px black;
+	z-index: 3000;
+	&.in {
+		@include animation(fadeInUp 700ms both cubic-bezier(.5, .5, .45, 2));
+	}
+	&.out {
+		@include animation(fadeOutDown .5s 0ms both cubic-bezier(0, 0, .45, 1));
+	}
+	&:after, &:before {
+		bottom: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+
+	&:after {
+		border-color: rgba(0, 0, 0, 0);
+		border-bottom-color: lighten(#000, 7%);
+		border-width: 6px;
+		right: 6px;
+		margin-left: -6px;
+	}
+	&:before {
+		border-color: rgba(0, 0, 0, 0);
+		border-bottom-color: #000;
+		border-width: 7px;
+		right: 7px;
+		margin-left: -7px;
+	}
+}
+
+a.donate {
+	@include btn($blue, #fff, .8em);
+}
+
+.content {
+	position:relative;
+	width:240px;
+	margin:auto;
+	z-index:100;
+	&.in {
+		-webkit-animation: fadeInDown .08s 150ms both cubic-bezier(0, 0, .45, 1);
+	}
+	&.out {
+		-webkit-animation: fadeOutUp .08s 150ms both cubic-bezier(0, 0, .45, 1);
+	}
+	input[type="text"] {
+		border:0;
+		background:#000;
+		font-size:1em;
+		font-weight:200;
+		letter-spacing:-.01em;
+		color:$pink;
+		font-family: 'Open Sans', sans-serif;
+		padding:.5em;
+		width: 14em;
+		border-bottom: 1px solid #222;
+		border-radius: 2px;
+		&:focus {
+			outline:none;
+		}
+		&.error {
+			color:#ce4d73;
+		}
+	}
+	h2 {
+		font-weight:200;
+		font-size:1.2em;
+		padding-top:1.5em;
+		margin-bottom: .5em;
+		color:#ccc;
+	}
+	p {
+		color:#ccc;
+		padding-top:.4em;
+		line-height:1.4em;
+		font-size: .8em;
+		&.subInfo {
+			font-size:.8em;
+			color:#999;
+		}
+	}
+	.close {
+		text-indent:-9999px;
+		background:url(img/close.png) no-repeat;
+		width:28px;
+		height:28px;
+	  	display:block;
+	  	margin:auto;
+		opacity:.4;
+		background-size:100%;
+		margin-top:70px;
+		cursor:pointer;
+		@include transition(all .25s 4ms both ease-in-out);
+		&:hover {
+			opacity:.6;
+		}
+	}
+}
+
+.blur {
+	-webkit-filter: blur(3px);
 }
 
 .clear {
